@@ -1,6 +1,8 @@
 <?php 
 // no direct access
 
+use Joomla\CMS\Uri\Uri;
+
 defined( '_JEXEC' ) or die( 'Restricted access' ); 
 
 ?>
@@ -10,7 +12,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 
 <?php
 
-$modURL 	= JURI::base().'modules/mod_parallax_skill';
+$modURL = Uri::base() . 'modules/mod_parallax_skill';
 ?>
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/responsive-mod.css" type="text/css" />

@@ -3,10 +3,14 @@
 // no direct access
 defined('_JEXEC') or die ('Restricted access'); 
 
-$doc = JFactory::getDocument();
+use Joomla\CMS\Factory;
+use Joomla\CMS\Language\Text;
+
+$doc = Factory::getDocument();
+$app = Factory::getApplication();
 $path = 'index.php?option=com_ajax&amp;module=parallaxcontact';
-$csite_name	= $app->getCfg('sitename');
-$email_error_msg = JText::_('Please fill with the correct email address');
+$csite_name = $app->get('sitename');
+$email_error_msg = Text::_('Please fill with the correct email address');
 
 //session_name("parallaxcontact");
 
@@ -25,9 +29,9 @@ jQuery(document).ready(function() {
 
         var name = jQuery('#form-name').val();
         var email = jQuery('#form-email').val();
-		var enable_captcha = ".$enable_captcha.";
+		var enable_captcha = \".$enable_captcha.\"";
         var captcha = jQuery('#form-captcha').val();
-        var expect = ".$_SESSION['expect'].";
+        var expect = \".$_SESSION['expect'].\"";
         var message = jQuery('#form-message').val();
 		var submitted = jQuery('#submitted').val();
         var error = 0;
@@ -37,7 +41,7 @@ jQuery(document).ready(function() {
 		
         if (name === '' || email === '' || captcha === '' ) {
             
-			document.getElementById('alert').innerHTML = '<div id=\"details-error\" class=\"text-error\"><i class=\"typcn typcn-warning\"></i> ".$error_msg."</div>';
+			document.getElementById('alert').innerHTML = '<div id=\"details-error\" class=\"text-error\"><i class=\"typcn typcn-warning\"></i> '."$error_msg.\"</div>';
 			jQuery('#alert').fadeIn(200);
 			jQuery('#details-error').css('display', 'block');
 			error = 1;
@@ -45,7 +49,7 @@ jQuery(document).ready(function() {
 
 			if (!(/(.+)@(.+){2,}\.(.+){2,}/.test(email))) {
             
-				document.getElementById('alert').innerHTML = '<div id=\"details-error\" class=\"text-error\"><i class=\"typcn typcn-warning\"></i> ".$email_error_msg."</div>';
+				document.getElementById('alert').innerHTML = '<div id=\"details-error\" class=\"text-error\"><i class=\"typcn typcn-warning\"></i> '."$email_error_msg.\"</div>';
 				//jQuery('#details-error').fadeIn(200);
 				jQuery('#alert').fadeIn(200);
 				jQuery('#details-error').css('display', 'block');
@@ -114,6 +118,7 @@ jQuery(document).ready(function() {
     });
 	
 });
+
 ";
 $doc->addScriptDeclaration($js);
 ?>
@@ -189,8 +194,10 @@ placeholder="" />
 
 
 
+
 </section>		
 <!-- end contact form module -->
+
 
 
 

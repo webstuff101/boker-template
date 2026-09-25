@@ -1,10 +1,13 @@
 <?php
 /**
- cover box for joomla 3x and 2.5x
+ cover box for joomla 6
  */
  
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
+
+use Joomla\CMS\Module\ModuleHelper;
+
 // Include the syndicate functions only once
 require_once( dirname(__FILE__).'/helper.php' );
 require_once( dirname(__FILE__).'/assets/classe/layout.php' );
@@ -12,6 +15,6 @@ require_once( dirname(__FILE__).'/assets/classe/layout.php' );
 $moduleclass_sfx = htmlspecialchars($params->get('moduleclass_sfx'));
 $Content = modCoverboxHelper::getContent( $params );
 $CoverboxOptionsParams = modCoverboxHelper::getData( $params );
-require( JModuleHelper::getLayoutPath( 'mod_coverbox' ) );
+require( ModuleHelper::getLayoutPath( 'mod_coverbox' ) );
 
 ?>

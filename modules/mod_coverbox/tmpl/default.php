@@ -2,7 +2,8 @@
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php
- $modURL 	= JURI::base().'modules/mod_coverbox'; 
+use Joomla\CMS\Uri\Uri;
+ $modURL 	= Uri::base().'modules/mod_coverbox'; 
 
 ?>
 

@@ -1,17 +1,25 @@
 <?php
 /**
- * POPUP GALLERY! Joomla Module 3.x 2.x
+ * POPUP GALLERY! Joomla Module for Joomla 6
  * 
+ * @package     Joomla.Site
+ * @subpackage  Modules.PopupGallery
+ * @copyright   Copyright (C) Globbersthemes. All rights reserved.
+ * @license     GNU General Public License version 2 or later
  */
  
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' );
-// Include the syndicate functions only once
+
+use Joomla\CMS\Module\ModuleHelper;
+
+// Include the helper functions only once
 require_once( dirname(__FILE__).'/helper.php' );
 require_once( dirname(__FILE__).'/assets/classe/layout.php' );
+
 $Content = modPopupgallery_GlobbersThemesHelper::getContent( $params );
 $Popupgallery_GlobbersThemesOptionsParams = modPopupgallery_GlobbersThemesHelper::getData( $params );
-require( JModuleHelper::getLayoutPath( 'mod_popupgallery_globbersthemes' ) );
+
+require( ModuleHelper::getLayoutPath( 'mod_popupgallery_globbersthemes' ) );
 
 ?>
-

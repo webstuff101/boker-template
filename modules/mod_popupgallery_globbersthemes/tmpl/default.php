@@ -1,14 +1,19 @@
 <?php 
 
 /**
- * POPUP GALLERY! Joomla Module 3.x 2.x
+ * POPUP GALLERY! Joomla Module for Joomla 6
  * 
+ * @package     Joomla.Site
+ * @subpackage  Modules.PopupGallery
+ * @copyright   Copyright (C) Globbersthemes. All rights reserved.
+ * @license     GNU General Public License version 2 or later
  */
  
-defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
+use Joomla\CMS\Uri\Uri;
 
-<?php
-$modURL 	= JURI::base().'modules/mod_popupgallery_globbersthemes';
+defined( '_JEXEC' ) or die( 'Restricted access' ); 
+
+$modURL = Uri::base() . 'modules/mod_popupgallery_globbersthemes';
 
 ?>
 

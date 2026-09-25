@@ -1,14 +1,16 @@
 <?php 
 
 /**
- * Gallery Grid! Joomla Module 3.x 2.x
+ * Gallery Grid! Joomla Module 6
  * 
  */
  
+use Joomla\CMS\Uri\Uri;
+
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php
-$modURL 	= JURI::base().'modules/mod_gallerygrid_globbersthemes';
+$modURL 	= Uri::base().'modules/mod_gallerygrid_globbersthemes';
 
 ?>
 

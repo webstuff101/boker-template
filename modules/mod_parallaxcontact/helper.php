@@ -2,17 +2,23 @@
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+use Joomla\CMS\Module\ModuleHelper;
+use Joomla\CMS\Session\Session;
+use Joomla\CMS\Mail\Mail;
+use Joomla\CMS\Registry\Registry;
+use Joomla\CMS\Application\CMSApplication;
+
 class modParallaxContactHelper {
 
 	public static function getAjax() {
-		jimport('joomla.application.module.helper');
-		$input  = JFactory::getApplication()->input;
-		$module = JModuleHelper::getModule('parallaxcontact');
-		$params = new JRegistry();
+		$input  = Factory::getApplication()->input;
+		$module = ModuleHelper::getModule('parallaxcontact');
+		$params = new Registry();
 		$params->loadString($module->params);
 		$node        = $params->get('node', 'data');
 		$format     = $params->get('format', 'raw');
-		$session     = JFactory::getSession();
+		$session     = Factory::getSession();
 		$sessionData = $session->get($node);
 
 		$subject = $params->get('subject','Request a quote');
@@ -137,7 +143,7 @@ class modParallaxContactHelper {
 			if( !$hasError ) 
 			{
 				
-				$mail = JFactory::getMailer();		
+				$mail = Factory::getMailer();		
 				
 				//$config = JFactory::getConfig();
 				//$config->getValue( 'config.mailfrom' ),

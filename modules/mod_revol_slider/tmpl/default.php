@@ -1,6 +1,9 @@
 <?php // no direct access
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
-<?php $modURL = JURI::base().'modules/mod_revol_slider'; ?>
+<?php
+use Joomla\CMS\Uri\Uri;
+$modURL = Uri::base().'modules/mod_revol_slider'; 
+?>
 <?php if ($RevolSliderOptionsParams['loadjquery'] == "1" ) : ?>
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/jquery-1.10.2.min.js"></script>
 <?php endif ?>
