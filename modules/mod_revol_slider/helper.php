@@ -40,7 +40,6 @@ class modRevolSliderHelper
 
 		$RevolSliderOptionsParams = array();
 
-		$RevolSliderOptionsParams['loadjquery'] = $params->get( 'loadjquery' );
 
 		$RevolSliderOptionsParams['moduleclass_sfx'] = $params->get( 'moduleclass_sfx' );
 

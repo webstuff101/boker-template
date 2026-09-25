@@ -15,7 +15,6 @@ use Joomla\CMS\Module\ModuleHelper;
 
 // Include the helper functions only once
 require_once( dirname(__FILE__).'/helper.php' );
-require_once( dirname(__FILE__).'/assets/classe/layout.php' );
 
 $Content = modPopupgallery_GlobbersThemesHelper::getContent( $params );
 $Popupgallery_GlobbersThemesOptionsParams = modPopupgallery_GlobbersThemesHelper::getData( $params );

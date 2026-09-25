@@ -132,7 +132,7 @@ $doc->addScriptDeclaration($js);
 
 <?php } ?>
 <div id="contact-form-globbersthemes">
-<div id="f-contact"><?php echo $module_Parallax_Contact ;?></div>
+<div id="f-contact"><?php echo ?></div>
 
 
 <form id="contactform" class="container" name="contactform" action="<?php echo $path; ?>" method="post" enctype="multipart/form-data">

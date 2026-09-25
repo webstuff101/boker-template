@@ -57,10 +57,6 @@
     <config>
 		<fields name="params">
 			<fieldset name="Advanced">
-				<field name="loadjquery" type="radio" class="btn-group btn-group-yesno" default="0" label="Load Jquery lib" description="choose to enable or disable loading jquery library">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
 				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 				<field name="imageheight" type="text" default="900" label="Height of slider" description="Height of the slider" />
 				<field name="slidedelay" type="text" default="4000" label="delay of slider" description="delay of the images slider" />

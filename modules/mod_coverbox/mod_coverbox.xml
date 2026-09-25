@@ -60,10 +60,6 @@
     <config>
 		<fields name="params">
 			<fieldset name="basic">
-			<field name="loadjquery" type="radio" class="btn-group btn-group-yesno" default="0" label="Load Jquery lib" description="choose to enable or disable loading jquery library">
-		        <option value="1">JYES</option>
-		        <option value="0">JNO</option>
-	        </field>
 			<field name="fontsize" type="text" default="16px" label="Font-Size Title Coverbox" description="font-size title coverbox" />
 			<field name="color" type="color" default="#252525" label="Color Title Coverbox" description="color title coverbox" />
 			<field name="fontsize-text" type="text" default="12px" label="Font-Size Text Coverbox" description="font-size text coverbox" />

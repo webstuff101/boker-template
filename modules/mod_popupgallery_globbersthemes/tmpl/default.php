@@ -22,7 +22,7 @@ $modURL = Uri::base() . 'modules/mod_popupgallery_globbersthemes';
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/prettyphoto/pretty.js"></script>
 
 <div id="teammanager <?php echo $Popupgallery_GlobbersThemesOptionsParams['moduleclass_sfx'];?>">
-<div id="team_manager"><?php echo $module_Team_Manager_System; ?></div>
+<div id="team_manager"><?php echo  ?></div>
 
 
 <?php if ($Popupgallery_GlobbersThemesOptionsParams['enableitem1'] == "1" ) : ?>

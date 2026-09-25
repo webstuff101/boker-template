@@ -11,7 +11,6 @@ class modCoverboxHelper
 	{
 		$CoverboxOptionsParams = array();
 		$CoverboxOptionsParams['moduleclass_sfx'] = $params->get( 'moduleclass_sfx' );
-		$CoverboxOptionsParams['loadjquery'] = $params->get( 'loadjquery' );
 		$CoverboxOptionsParams['fontsize'] = $params->get( 'fontsize' );
 		$CoverboxOptionsParams['color'] = $params->get( 'color' );
 		$CoverboxOptionsParams['fontsize-text'] = $params->get( 'fontsize-text' );

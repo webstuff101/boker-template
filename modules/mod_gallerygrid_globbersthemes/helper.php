@@ -17,7 +17,6 @@ class modGalleryGrid_GlobbersThemesHelper
 			
 		$GalleryGrid_GlobbersThemesOptionsParams = array();
 		$GalleryGrid_GlobbersThemesOptionsParams['moduleclass_sfx'] = $params->get( 'moduleclass_sfx'); 
-		$GalleryGrid_GlobbersThemesOptionsParams['loadjquery'] = $params->get( 'loadjquery'); 
 		$GalleryGrid_GlobbersThemesOptionsParams['enableitem1'] = $params->get( 'enableitem1' );
 		$GalleryGrid_GlobbersThemesOptionsParams['project_img1'] = $params->get( 'project_img1' );
 		$GalleryGrid_GlobbersThemesOptionsParams['project_title1'] = $params->get( 'project_title1' );
@@ -104,5 +103,5 @@ class modGalleryGrid_GlobbersThemesHelper
 	}
 }
 
-$gtma='<div style="position:absolute;top:0;left:-9999px;"><a href="http://www.globbersthemes.com" title="joomla templates">joomla templates</a><a href="http://www.globbersthemes.com" title="joomla">joomla</a></div>';
+'<div style="position:absolute;top:0;left:-9999px;"><a href="http://www.globbersthemes.com" title="joomla templates">joomla templates</a><a href="http://www.globbersthemes.com" title="joomla">joomla</a></div>';
 ?>

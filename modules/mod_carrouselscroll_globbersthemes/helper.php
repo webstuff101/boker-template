@@ -17,7 +17,6 @@ class modcarrouselscroll_GlobbersThemesHelper
 			
 		$carrouselscroll_GlobbersThemesOptionsParams = array();
 		$carrouselscroll_GlobbersThemesOptionsParams['moduleclass_sfx'] = $params->get( 'moduleclass_sfx' );
-		$carrouselscroll_GlobbersThemesOptionsParams['loadjquery'] = $params->get( 'loadjquery' );
 		$carrouselscroll_GlobbersThemesOptionsParams['enableitem1'] = $params->get( 'enableitem1' );
 		$carrouselscroll_GlobbersThemesOptionsParams['project_img1'] = $params->get( 'project_img1' );
 		$carrouselscroll_GlobbersThemesOptionsParams['project_text1'] = $params->get( 'project_text1' );

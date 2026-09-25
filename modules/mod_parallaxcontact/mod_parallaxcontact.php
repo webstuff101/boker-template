@@ -8,7 +8,6 @@ use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Module\ModuleHelper;
 
 require_once dirname(__FILE__). '/helper.php';
-require_once( dirname(__FILE__).'/assets/classe/layout.php' );
 
 $doc = Factory::getDocument();
 $app = Factory::getApplication();

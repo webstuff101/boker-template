@@ -2,16 +2,16 @@
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 <?php
 use Joomla\CMS\Uri\Uri;
-$modURL = Uri::base().'modules/mod_revol_slider'; 
+use Joomla\CMS\Factory;
+$modURL = Uri::base().'modules/mod_revol_slider';
+$doc = Factory::getDocument();
+$doc->getWebAssetManager()->useScript('jquery');
 ?>
-<?php if ($RevolSliderOptionsParams['loadjquery'] == "1" ) : ?>
-<script type="text/javascript" src="<?php echo $modURL; ?>/assets/jquery-1.10.2.min.js"></script>
-<?php endif ?>
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/jquery.themepunch.plugins.min.js"></script>
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/settings.css" type="text/css" />
 <div class="bannercontainer<?php echo $RevolSliderOptionsParams['moduleclass_sfx'];?>">
-    <div id="revol-main"><?php echo $module_revol;?></div>
+    <div id="revol-main"><?php echo ?></div>
     <div class="banner">
         <ul>
             <?php if ($RevolSliderOptionsParams['enableitem1'] == "1" ) : ?>

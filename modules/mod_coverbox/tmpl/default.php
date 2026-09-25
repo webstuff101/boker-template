@@ -3,18 +3,16 @@ defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php
 use Joomla\CMS\Uri\Uri;
- $modURL 	= Uri::base().'modules/mod_coverbox'; 
+use Joomla\CMS\Factory;
+
+$modURL = Uri::base().'modules/mod_coverbox';
+$doc = Factory::getDocument();
+$doc->getWebAssetManager()->useScript('jquery');
 
 ?>
 
-<?php if ($CoverboxOptionsParams['loadjquery'] == "1" ) : ?>
-<script type="text/javascript" src="<?php echo $modURL; ?>/assets/jquery.js"></script>
-<?php endif ?>
-
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/prettyphoto/pretty.css" type="text/css" />
-
-
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/style-coverbox.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/responsive-coverbox.css" type="text/css" />
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/prettyphoto/pretty.js"></script>

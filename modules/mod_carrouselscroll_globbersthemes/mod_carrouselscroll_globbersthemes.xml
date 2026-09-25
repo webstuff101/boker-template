@@ -70,12 +70,6 @@
 					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
 					
 				<field type="spacer" name="spacer1" hr="true" />
-				<field name="loadjquery" type="radio" class="btn-group btn-group-yesno" default="1" label="Load Jquery lib" description="choose to enable or disable loading jquery library">
-					<option value="1">JYES</option>
-					<option value="0">JNO</option>
-				</field>
-					
-				
 				<field type="spacer" name="spacer2" hr="true" />
 				<field name="enableitem1" type="radio" class="btn-group btn-group-yesno" default="0" label="Activate Item #1" description="enable to activate this item">
 					<option value="1">JYES</option>

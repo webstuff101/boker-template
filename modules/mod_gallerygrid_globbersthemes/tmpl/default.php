@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 /**
  * Gallery Grid! Joomla Module 6
@@ -6,11 +6,14 @@
  */
  
 use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Factory;
 
 defined( '_JEXEC' ) or die( 'Restricted access' ); ?>
 
 <?php
-$modURL 	= Uri::base().'modules/mod_gallerygrid_globbersthemes';
+$modURL = Uri::base().'modules/mod_gallerygrid_globbersthemes';
+$doc = Factory::getDocument();
+$doc->getWebAssetManager()->useScript('jquery');
 
 ?>
 
@@ -22,9 +25,9 @@ $modURL 	= Uri::base().'modules/mod_gallerygrid_globbersthemes';
 
 <div id="containers">
 <div class="containers <?php echo $GalleryGrid_GlobbersThemesOptionsParams['moduleclass_sfx'];?>">
-<div id="mod-grid"><?php echo $gtma;?></div>
+<div id="mod-grid"><?php echo ?></div>
 <?php if ($GalleryGrid_GlobbersThemesOptionsParams['enableitem1'] == "1" ) : ?>
-<div class="module-galleygrid"><?php echo $module_galleryGrid;?></div>
+<div class="module-galleygrid"><?php echo ?></div>
 <div class="element clearfix col1-3">
     <a data-rel="prettyPhoto" href="<?php echo $GalleryGrid_GlobbersThemesOptionsParams['project_img1']; ?>">
 	<div class="images"><img src="<?php echo $GalleryGrid_GlobbersThemesOptionsParams['project_img1']; ?>" alt="<span class='title'><?php echo $GalleryGrid_GlobbersThemesOptionsParams['project_title1']; ?></span>
@@ -210,9 +213,7 @@ $modURL 	= Uri::base().'modules/mod_gallerygrid_globbersthemes';
  </div>
  
  
- <?php if ($GalleryGrid_GlobbersThemesOptionsParams['loadjquery'] == "1" ) : ?>
-	  <script type="text/javascript" src="<?php echo $modURL; ?>/assets/js/jquery-1.9.1.min.js"></script>
- <?php endif ?>
+ 
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/js/jquery.sliphover.min.js"></script>
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/prettyphoto/pretty.js"></script>
 

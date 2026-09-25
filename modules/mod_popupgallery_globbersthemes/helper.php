@@ -17,7 +17,6 @@ class modPopupgallery_GlobbersThemesHelper
 			
 		$Popupgallery_GlobbersThemesOptionsParams = array();
 		$Popupgallery_GlobbersThemesOptionsParams['moduleclass_sfx'] = $params->get( 'moduleclass_sfx' );
-		$Popupgallery_GlobbersThemesOptionsParams['loadjquery'] = $params->get( 'loadjquery' );
 		$Popupgallery_GlobbersThemesOptionsParams['enableitem1'] = $params->get( 'enableitem1' );
 		$Popupgallery_GlobbersThemesOptionsParams['project_img1'] = $params->get( 'project_img1' );
 		$Popupgallery_GlobbersThemesOptionsParams['enableitem2'] = $params->get( 'enableitem2' );
