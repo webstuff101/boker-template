@@ -1,0 +1,136 @@
+
+
+
+
+  .coverboxes{overflow:hidden} 
+ .coverboxes>div{margin:20px auto}
+.coverbox{background-color:red}
+.coverboxinfo{position:absolute;top:0;left:100%;width:100%;padding:0 20px;overflow:hidden}
+.coverboxinfo h5{margin-top:0}
+.coverboxinfo p{margin-top:10px;font-family:'Raleway',sans-serif;color:#959595}
+
+h4.title-coverbox {text-transform:uppercase; font-weight:bold;text-align:left;}
+
+
+
+.coverboxes,
+.coverboxes:hover,
+.coverboxes:active,
+.coverboxes:focus {
+    display: block;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
+   
+}
+
+.coverboxes .overlay {
+ opacity:1;
+   width:90%;
+  height:100%; 
+   position: absolute;
+   top:0;
+   left:0;
+   margin-left:15px;
+   
+   -moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out; 
+  
+  
+} 
+
+
+
+  .coverboxes .overlay:hover {
+  background: rgba(0, 0, 0, 0.8) ;
+   width:90%;
+  height:100%; 
+   position: absolute;
+   top:0;
+   left:0;
+   margin-left:15px;
+   
+   -moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+-webkit-transition: all 0.4s ease-in-out;
+-moz-transition: all 0.4s ease-in-out;
+-o-transition: all 0.4s ease-in-out;
+-ms-transition: all 0.4s ease-in-out;
+transition: all 0.4s ease-in-out; 
+  
+} 
+
+.clr {clear:both !important;}
+
+
+.coverboxes .overlay .fa {
+  
+	visibility:hidden;
+}
+ .coverboxes .overlay:hover .fa {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 4px;
+	visibility:visible;
+}
+
+
+@media only screen and (max-width:991px){
+.coverboxinfo{margin:40px auto;position:relative;padding:0;width:100%;left:0}
+.coverboxes>div{margin-left:0 !important;/* width:33.334% */width:30%; }
+}
+
+
+@media only screen and (max-width:767px){
+.coverboxes>div{width:100%;}
+.container-module{width:90%;}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

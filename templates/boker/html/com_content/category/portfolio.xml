@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="portfolio" option="COM_CONTENT_CATEGORY_VIEW_BLOG_OPTION">
+		<help
+			key = "JHELP_MENUS_MENU_ITEM_ARTICLE_CATEGORY_BLOG"
+		/>
+		<message>
+			<![CDATA[COM_CONTENT_CATEGORY_VIEW_BLOG_DESC]]>
+		</message>
+	</layout>
+
+	<!-- Add fields to the request variables for the layout. -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldprefix="Joomla\Component\Categories\Administrator\Field"
+		>
+			<field
+				name="id"
+				type="modal_category"
+				label="JGLOBAL_CHOOSE_CATEGORY_LABEL"
+				extension="com_content"
+				required="true"
+				select="true"
+				new="true"
+				edit="true"
+				clear="true"
+			/>
+
+			<!--<field
+				name="filter_tag"
+				type="tag"
+				label="JTAG"
+				multiple="true"
+				mode="nested"
+			/>-->
+		</fieldset>
+	</fields>
+
+	<!-- Add fields to the parameters object for the layout. -->
+	<fields name="params">
+		<fieldset name="basic" label="Image Effect">
+				<field
+					name="layout_type"
+					type="hidden"
+					default="blog"
+				/>
+				
+			<field name="image_layout" type="list" label="Choose An Effect:" default="effect-layla">
+		    <option value="effect-layla">Effect Layla</option>
+			<option value="effect-sadie">Effect Sadie</option>
+			<option value="effect-oscar">Effect Oscar</option>
+			<option value="effect-bubba">Effect Bubba</option>
+			<option value="effect-milo">Effect Milo</option>
+			<option value="effect-betty">Effect Betty</option>
+			<option value="effect-apollo">Effect Apollo</option>
+			<option value="effect-selena">Effect Selena</option>
+			<option value="effect-zoe">Effect Zoe</option>
+			<option value="effect-goliath">Effect-Goliath</option>
+			<option value="effect-vero">Effect Vero</option>
+		</field>
+		</fieldset>
+
+		<fieldset name="advanced" label="JGLOBAL_BLOG_LAYOUT_OPTIONS" description="JGLOBAL_SUBSLIDER_BLOG_LAYOUT_LABEL">
+			<field
+				name="num_intro_articles"
+				type="number"
+				label="JGLOBAL_NUM_INTRO_ARTICLES_LABEL"
+				filter="integer"
+				useglobal="true"
+				parentclass="stack span-1"
+			/>
+
+			<field
+				name="num_columns"
+				type="number"
+				label="JGLOBAL_NUM_COLUMNS_LABEL"
+				filter="integer"
+				parentclass="stack span-1-inline"
+				useglobal="true"
+			/>
+
+			<field
+				name="show_pagination"
+				type="list"
+				label="JGLOBAL_PAGINATION_LABEL"
+				useglobal="true"
+				class="form-select-color-state"
+				validate="options"
+				parentclass="stack span-1"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+				<option value="2">JGLOBAL_AUTO</option>
+			</field>
+
+			<field
+				name="show_pagination_results"
+				type="list"
+				label="JGLOBAL_PAGINATION_RESULTS_LABEL"
+				useglobal="true"
+				class="form-select-color-state"
+				validate="options"
+				parentclass="stack span-1-inline"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+		</fieldset>
+
+		<fieldset name="article"
+			label="COM_CONTENT_ATTRIBS_FIELDSET_LABEL"
+			addfieldprefix="Joomla\Component\Content\Administrator\Field"
+		>
+
+			<field
+				name="article_layout" type="componentlayout"
+				label="JGLOBAL_FIELD_LAYOUT_LABEL"
+				description="JGLOBAL_FIELD_LAYOUT_DESC"
+				class="form-select"
+				menuitems="true"
+				extension="com_content"
+				view="article"
+			/>
+
+			<field
+				name="show_title"
+				type="list"
+				label="JGLOBAL_SHOW_TITLE_LABEL"
+				useglobal="true"
+				class="form-select-color-state"
+				validate="options"
+				>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="show_intro"
+				type="list"
+				label="JGLOBAL_SHOW_INTRO_LABEL"
+				useglobal="true"
+				class="form-select-color-state"
+				validate="options"
+				>
+				<option value="use_article">COM_CONTENT_FIELD_VALUE_USE_ARTICLE_SETTINGS</option>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+			
+			<field 
+			name="color_name" 
+		    type="color" 
+			label="Title Color:" 
+			description="Example: #000000" 
+			default="#ffffff">
+		    </field>
+			
+			<field 
+			name="color_description" 
+			type="color" 
+			label="Text Color" 
+			description="Example: #000000" 
+			default="#ffffff">
+		 </field>
+
+		</fieldset>
+
+		<fieldset name="integration" label="COM_MENUS_INTEGRATION_FIELDSET_LABEL">
+			<field
+				name="show_feed_link"
+				type="list"
+				label="JGLOBAL_SHOW_FEED_LINK_LABEL"
+				useglobal="true"
+				class="form-select-color-state"
+				validate="options"
+				>
+				<option value="0">JHIDE</option>
+				<option value="1">JSHOW</option>
+			</field>
+
+			<field
+				name="feed_summary"
+				type="list"
+				label="JGLOBAL_FEED_SUMMARY_LABEL"
+				useglobal="true"
+				validate="options"
+				>
+				<option value="0">JGLOBAL_INTRO_TEXT</option>
+				<option value="1">JGLOBAL_FULL_TEXT</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

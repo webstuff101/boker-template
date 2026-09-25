@@ -1,0 +1,215 @@
+/**
+ * @version 		$Id:$
+ * @name			GalleryImagePro (Release 1.0.0)
+ * @author			 ()
+ * @package			com_galleryimagepro
+ * @subpackage		com_galleryimagepro.site
+ * @copyright		
+ * @license			GNU General Public License version 3 or later; See http://www.gnu.org/copyleft/gpl.html 
+ * 
+ * The following Component Architect header section must remain in any distribution of this file
+ *
+ * 
+ */
+/*#################### gallery responsive ############################ */
+
+
+
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+div.galleryimagepro.images-blog div.large_6  h2 {
+font-weight: 900;
+font-size:25px;
+}
+
+div.galleryimagepro.images-blog div.large_6 p {
+width:70%;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:15px;
+margin-bottom:15px;
+font-size:13px;
+} 
+
+}
+
+
+@media only screen and (min-width: 0px) and (max-width: 500px) {
+div.galleryimagepro.images-blog div.large_12  h2 {
+font-weight: 900;
+font-size:21px;
+}
+
+
+div.galleryimagepro.images-blog div.large_12 p {
+width:70%;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:15px;
+margin-bottom:15px;
+font-size:12px;
+} 
+
+
+} 
+
+
+@media only screen and (min-width: 0px) and (max-width: 800px) {
+
+/*#################### 2 Colonnes ############################ */
+div.galleryimagepro.images-blog div.large_6 div.items.column-0 {
+ float:left !important;
+width:100%;
+margin:0 !important;
+padding:0 !important;
+background-size:cover !important;
+}
+
+div.galleryimagepro.images-blog div.large_6 div.items.column-1 {
+ float:left !important; 
+width:100%;
+margin:0 !important;
+padding:0 !important;
+background-size:cover !important;
+} 
+
+div.galleryimagepro.images-blog div.large_6 div.items.column-2 {
+ float:left !important; 
+width:100%;
+margin:0 !important;
+padding:0 !important;
+background-size:cover !important;
+} 
+
+div.galleryimagepro.images-blog div.large_6  h2 {
+font-weight: 900;
+font-size:22px;
+}
+
+div.galleryimagepro.images-blog div.large_6 p {
+width:70%;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:15px;
+margin-bottom:15px;
+font-size:12px;
+} 
+
+
+
+
+
+/*#################### 3 Colonnes ############################ */
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-0 {
+ float:left ;
+width:100%;
+margin:0 ;
+padding:0 ;
+background-size:cover ;
+}
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-1 {
+ float:left ; 
+width:100%;
+margin:0 0 0 0% ;
+padding:0 ;
+background-size:cover ;
+} 
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-2 {
+float:right ; 
+width:100%;
+margin:0 ;
+padding:0 ;
+background-size:cover ;
+} 
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-3 {
+float:left ; 
+width:100%;
+margin:0 ;
+padding:0 ;
+background-size:cover ;
+} 
+
+
+}
+
+
+
+
+
+
+
+@media only screen and (min-width: 1024px) and (max-width: 1500px) {
+div.galleryimagepro.images-blog div.large_4  h2 {
+font-weight: 900;
+font-size:19px;
+}
+
+div.galleryimagepro.images-blog div.large_4 p {
+width:75%;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:10px;
+margin-bottom:10px;
+font-size:12px;
+} 
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1023px) {
+div.galleryimagepro.images-blog div.large_4  h2 {
+font-weight: 700;
+font-size:16px;
+}
+
+div.galleryimagepro.images-blog div.large_4 p {
+width:75%;
+text-align:center;
+margin-left:auto;
+margin-right:auto;
+margin-top:10px;
+margin-bottom:10px;
+font-size:11px;
+} 
+
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-0 {
+ float:left ;
+width:32%;
+margin:0 ;
+padding:0 ;
+background-size:cover ;
+}
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-1 {
+ float:left ; 
+width:32%;
+margin:0 0 0 2% ;
+padding:0 ;
+background-size:cover ;
+} 
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-2 {
+float:right ; 
+width:32%;
+margin:0 ;
+padding:0 ;
+background-size:cover ;
+} 
+
+div.galleryimagepro.images-blog div.large_4 div.items.column-3 {
+float:left ; 
+width:32%;
+margin:0 ;
+padding:0 ;
+background-size:cover ;
+} 
+
+
+
+}

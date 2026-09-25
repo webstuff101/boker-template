@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Parallax Skill Responsive | Globbersthemes </name>
+    <author>Globbers</author>
+    <email>globbers@hotmail.fr</email>
+    <version>1.0.0</version>
+    <description>
+	
+	 <![CDATA[<h1> Parallax Skill Responsive joomla3x and Joomla 2.5x</h1>
+	    <span style="font-size: 15px;font-weight:bold;">
+			Parallax Skill Responsive Joomla Extension ,design by globbers.
+		
+			<br />Visit globbersthemes: <a href="http://www.globbersthemes.com" target="_blank">http://www.globbersthemes.com</a>.<br />
+			</span>
+			
+
+			<hr />
+
+			<h3><b>OTHER FREE EXTENSIONS </b></h3>
+			<table>
+			<td width="200px">
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/timeline" target="_blank"><b>Timeline Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/revo-slider" target="_blank"><b>Revol Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/pricing-table" target="_blank"><b>Pricing Table Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/accordeon" target="_blank"><b>Accordeon Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/mixitup-slider" target="_blank"><b>Mixitup Portfolio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/carrousel-slider" target="_blank"><b>Carrousel Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/" target="_blank"><b>Media Folio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/parallax-slide" target="_blank"><b>Parallax Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/magic-portfolio" target="_blank"><b>Magic Portfolio Joomla Extension</b></a>.</span><br />
+			</td>
+
+			<td width="200px">
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/grid-rotator" target="_blank"><b>Grid Rotator Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/masonry-portfolio" target="_blank"><b>Masonry Portfolio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/team-manager" target="_blank"><b>Team Manager Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/google-map" target="_blank"><b>Google Map Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/slideshow-image-duo" target="_blank"><b>Slideshow Image Duo Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/gallery-grid" target="_blank"><b>Gallery Grid Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/carrousel-text" target="_blank"><b>Carrousel Text Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/flickr-photostream" target="_blank"><b>Flickr Photostream Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/grid-rotator" target="_blank"><b>Grid Rotator Joomla Extension</b></a>.</span><br />
+			
+			</td>
+
+		
+			</table>
+			<br /><br />]]>
+	
+	
+	
+	
+	
+	</description>
+    <files>
+       <filename>mod_parallax_skill.xml</filename>
+        <filename module="mod_parallax_skill">mod_parallax_skill.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="Advanced">
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+		             <field name="ImageParallax" type="media" default="" label="Image Parallax:" description="image Prallax" />
+					 <field name="TitleParallax" type="text" default="Some Facts Of Us" label="Title Parallax:" description="" size="10" />
+					 <field name="coloricon" type="color" default="#fe7e17" label="Icon Color :" description="" size="10" />
+					 <field type="spacer" name="spacer1" hr="true" />
+					 <field name="IconSkill1" type="text" default="fa fa-tachometer" label="Icon Skill 1:" description="to change the icon to view this page:http://fortawesome.github.io/Font-Awesome/icons" size="10" />
+					 <field name="CountSkill1" type="text" default="3000" label="Count Skill 1:" description="enter a number" size="10" />
+					  <field name="NameSkill1" type="text" default="Hours of work" label="Title Skill 1:" description="enter a title" size="10" />
+					 <field type="spacer" name="spacer2" hr="true" />
+					 <field name="IconSkill2" type="text" default="fa fa-rocket" label="Icon Skill 2:" description="to change the icon to view this page:http://fortawesome.github.io/Font-Awesome/icons" size="10" />
+					  <field name="CountSkill2" type="text" default="80" label="Count Skill 2:" description="enter a number" size="10" />
+					  <field name="NameSkill2" type="text" default="Projects delivered" label="Title Skill 2:" description="enter a title" size="10" />
+	
+					 <field type="spacer" name="spacer3" hr="true" />
+					 <field name="IconSkill3" type="text" default="fa fa-user" label="Icon Skill 3:" description="to change the icon to view this page:http://fortawesome.github.io/Font-Awesome/icons" size="10" />
+					  <field name="CountSkill3" type="text" default="35" label="Count Skill 3:" description="enter a number" size="10" />
+					 <field name="NameSkill3" type="text" default="Satisfied clients" label="Title Skill 3:" description="enter a title" size="10" />
+					 
+					 <field type="spacer" name="spacer4" hr="true" />
+					 <field name="IconSkill4" type="text" default="fa fa-trophy" label="Icon Skill 4:" description="to change the icon to view this page:http://fortawesome.github.io/Font-Awesome/icons" size="10" />
+					 <field name="CountSkill4" type="text" default="14" label="Count Skill 4:" description="enter a number" size="10" />
+					 <field name="NameSkill4" type="text" default="Awards won" label="Title Skill 4:" description="enter a title" size="10" /> 
+			</fieldset>	
+		</fields>
+    </config>
+</extension>

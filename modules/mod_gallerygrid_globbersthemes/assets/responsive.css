@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+@media only screen and (max-width: 500px) {
+/* .title { display:none;} */
+
+}
+
+
+@media only screen and (max-width: 450px) {
+
+.col1-3 { 
+ width:100%;  
+height:100%;
+ margin:0.5% 0.5%;
+ float:left;  
+ position:relative ;
+
+ }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

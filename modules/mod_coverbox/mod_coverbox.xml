@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2.0" client="site" method="upgrade">
+    <name>Cover Box pro version | Globbersthemes </name>
+    <author>globbers</author>
+    <email>globbers@hotmail.fr</email>
+    <version>1.0</version>
+    <description>
+	
+	 <![CDATA[<h1> Cover Box with text, version pro</h1>
+	    <span style="font-size: 15px;font-weight:bold;">
+			Cover Box Joomla Extension ,design by globbers.
+					
+			<br />Visit globbersthemes: <a href="http://www.globbersthemes.com" target="_blank">http://www.globbersthemes.com</a>.<br />
+			</span>
+			
+
+			<hr />
+
+			<h3><b>OTHER FREE EXTENSIONS </b></h3>
+			<table>
+			<td width="200px">
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/timeline" target="_blank"><b>Timeline Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/revo-slider" target="_blank"><b>Revol Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/pricing-table" target="_blank"><b>Pricing Table Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/accordeon" target="_blank"><b>Accordeon Joomla Extension/b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/mixitup-slider" target="_blank"><b>Mixitup Portfolio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/carrousel-slider" target="_blank"><b>Carrousel Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/" target="_blank"><b>Media Folio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/parallax-slide" target="_blank"><b>Parallax Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/magic-portfolio" target="_blank"><b>Magic Portfolio Joomla Extension</b></a>.</span><br />
+			</td>
+
+			<td width="200px">
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/grid-rotator" target="_blank"><b>Grid Rotator Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/masonry-portfolio" target="_blank"><b>Masonry Portfolio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/team-manager" target="_blank"><b>Team Manager Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/google-map" target="_blank"><b>Google Map Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/slideshow-image-duo" target="_blank"><b>Slideshow Image Duo Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/gallery-grid" target="_blank"><b>Gallery Grid Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/carrousel-text" target="_blank"><b>Carrousel Text Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/flickr-photostream" target="_blank"><b>Flickr Photostream Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/grid-rotator" target="_blank"><b>Grid Rotator Joomla Extension</b></a>.</span><br />
+			
+			</td>
+
+		
+			</table>
+			<br /><br />]]>
+	
+	</description>
+    <files>
+       <filename>mod_coverbox.xml</filename>
+        <filename module="mod_coverbox">mod_coverbox.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+        <folder>assets</folder>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="loadjquery" type="radio" class="btn-group btn-group-yesno" default="0" label="Load Jquery lib" description="choose to enable or disable loading jquery library">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="fontsize" type="text" default="16px" label="Font-Size Title Coverbox" description="font-size title coverbox" />
+			<field name="color" type="color" default="#252525" label="Color Title Coverbox" description="color title coverbox" />
+			<field name="fontsize-text" type="text" default="12px" label="Font-Size Text Coverbox" description="font-size text coverbox" />
+			<field name="color-text" type="color" default="#9d9ca9" label="Color Text Coverbox" description="color text coverbox" />
+			
+			<field type="spacer" name="spacer1" hr="true" />
+			<field name="enableitem1" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #1" description="choose to enable or disable coverbox 1">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img1" type="media" default="" label="image coverbox #1 " description="image coverbox 1" />
+			<field name="project_title1" type="text" default="" label="title coverbox #1 " description="title coverbox 1" />
+			<field name="project_text1" type="textarea" default="" label="text coverbox #1 " description="text coverbox 1" />
+			
+			<field type="spacer" name="spacer2" hr="true" />
+			<field name="enableitem2" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #2" description="choose to enable or disable coverbox 2">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img2" type="media" default="" label="image coverbox #2 " description="image coverbox 2" />
+			<field name="project_title2" type="text" default="" label="title coverbox #2 " description="title coverbox 2" />
+			<field name="project_text2" type="textarea" default="" label="text coverbox #2 " description="text coverbox 2" />
+			
+			<field type="spacer" name="spacer3" hr="true" />
+			<field name="enableitem3" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #3" description="choose to enable or disable coverbox 3">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img3" type="media" default="" label="image coverbox #3 " description="image coverbox 3" />
+			<field name="project_title3" type="text" default="" label="title coverbox #3 " description="title coverbox 3" />
+			<field name="project_text3" type="textarea" default="" label="text coverbox #3 " description="text coverbox 3" />
+			
+			<field type="spacer" name="spacer4" hr="true" />
+			<field name="enableitem4" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #4" description="choose to enable or disable coverbox 4">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img4" type="media" default="" label="image coverbox #4 " description="image coverbox 4" />
+			<field name="project_title4" type="text" default="" label="title coverbox #4 " description="title coverbox 4" />
+			<field name="project_text4" type="textarea" default="" label="text coverbox #4 " description="text coverbox 4" />
+			
+			<field type="spacer" name="spacer5" hr="true" />
+			<field name="enableitem5" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #5" description="choose to enable or disable coverbox 5">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img5" type="media" default="" label="image coverbox #5 " description="image coverbox 5" />
+			<field name="project_title5" type="text" default="" label="title coverbox #5 " description="title coverbox 5" />
+			<field name="project_text5" type="textarea" default="" label="text coverbox #5" description="text coverbox 5" />
+			
+			<field type="spacer" name="spacer6" hr="true" />
+			<field name="enableitem6" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #6" description="choose to enable or disable coverbox 6">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img6" type="media" default="" label="image coverbox #6" description="image coverbox 6" />
+			<field name="project_title6" type="text" default="" label="title coverbox #6" description="title coverbox 6" />
+			<field name="project_text6" type="textarea" default="" label="text coverbox #6" description="text coverbox 6" />
+			
+			<field type="spacer" name="spacer6" hr="true" />
+			<field name="enableitem7" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #7" description="choose to enable or disable coverbox 7">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			
+			<field name="project_img7" type="media" default="" label="image coverbox #7" description="image coverbox 7" />
+			<field name="project_title7" type="text" default="" label="title coverbox #7" description="title coverbox 7" />
+			<field name="project_text7" type="textarea" default="" label="text coverbox #7" description="text coverbox 7" />
+			
+			<field type="spacer" name="spacer8" hr="true" />
+			<field name="enableitem8" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #8" description="choose to enable or disable coverbox 8">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img8" type="media" default="" label="image coverbox #8" description="image coverbox 8" />
+			<field name="project_title8" type="text" default="" label="title coverbox #8" description="title coverbox 8" />
+			<field name="project_text8" type="textarea" default="" label="text coverbox #8" description="text coverbox 8" />
+			
+			<field type="spacer" name="spacer9" hr="true" />
+			<field name="enableitem9" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #9" description="choose to enable or disable coverbox 9">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img9" type="media" default="" label="image coverbox #9" description="image coverbox 9" />
+			<field name="project_title9" type="text" default="" label="title coverbox #9" description="title coverbox 9" />
+			<field name="project_text9" type="textarea" default="" label="text coverbox #9" description="text coverbox 9" />
+			
+			<field type="spacer" name="spacer10" hr="true" />
+			<field name="enableitem10" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #10" description="choose to enable or disable coverbox 10">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img10" type="media" default="" label="image coverbox #10" description="image coverbox 10" />
+			<field name="project_title10" type="text" default="" label="title coverbox #10" description="title coverbox 10" />
+			<field name="project_text10" type="textarea" default="" label="text coverbox #10" description="text coverbox 10" />
+		
+			<field type="spacer" name="spacer11" hr="true" />
+			<field name="enableitem11" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #11" description="choose to enable or disable coverbox 11">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img11" type="media" default="" label="image coverbox #11" description="image coverbox 11" />
+			<field name="project_title11" type="text" default="" label="title coverbox #11" description="title coverbox 11" />
+			<field name="project_text11" type="textarea" default="" label="text coverbox #11" description="text coverbox 11" />
+			
+			<field type="spacer" name="spacer12" hr="true" />
+			<field name="enableitem12" type="radio" class="btn-group btn-group-yesno" default="0" label="enable or disable coverbox #12" description="choose to enable or disable coverbox 12">
+		        <option value="1">JYES</option>
+		        <option value="0">JNO</option>
+	        </field>
+			<field name="project_img12" type="media" default="" label="image coverbox #12" description="image coverbox 12" />
+			<field name="project_title12" type="text" default="" label="title coverbox #12" description="title coverbox 12" />
+			<field name="project_text12" type="textarea" default="" label="text coverbox #12" description="text coverbox 12" />
+			
+			</fieldset>
+			
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="input" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>	
+		</fields>
+    </config>
+</extension>

@@ -1,0 +1,1437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1.0" client="site" method="upgrade">
+    <name>Revol Responsive slider | Globbersthemes</name>
+    <author>Globbers</author>
+    <email>globbers@hotmail.fr</email>
+    <version>1.0.0</version>
+    <description>
+	 <![CDATA[<h1> Mod REVOL slideshow for joomla3x and joomla2.5x</h1>
+	    <span style="font-size: 15px;font-weight:bold;">
+			Mod REVOL slideshow Joomla Extension ,design by globbers.		
+			<br />Visit globbersthemes: <a href="http://www.globbersthemes.com" target="_blank">http://www.globbersthemes.com</a>.<br />
+			</span>
+			
+
+			<hr />
+
+			<h3><b>OTHER FREE EXTENSIONS </b></h3>
+			<table>
+			<td width="200px">
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/timeline" target="_blank"><b>Timeline Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/revo-slider" target="_blank"><b>Revol Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/pricing-table" target="_blank"><b>Pricing Table Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/accordeon" target="_blank"><b>Accordeon Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/mixitup-slider" target="_blank"><b>Mixitup Portfolio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/carrousel-slider" target="_blank"><b>Carrousel Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/" target="_blank"><b>Media Folio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/parallax-slide" target="_blank"><b>Parallax Slider Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/magic-portfolio" target="_blank"><b>Magic Portfolio Joomla Extension</b></a>.</span><br />
+			</td>
+
+			<td width="200px">
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/grid-rotator" target="_blank"><b>Grid Rotator Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/masonry-portfolio" target="_blank"><b>Masonry Portfolio Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/team-manager" target="_blank"><b>Team Manager Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/google-map" target="_blank"><b>Google Map Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/slideshow-image-duo" target="_blank"><b>Slideshow Image Duo Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/gallery-grid" target="_blank"><b>Gallery Grid Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/carrousel-text" target="_blank"><b>Carrousel Text Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/flickr-photostream" target="_blank"><b>Flickr Photostream Joomla Extension</b></a>.</span><br />
+			<span style="margin-right:10px;font-size:15px;"><a href="http://www.globbersthemes.com/joomla-extensions/joomla-extensions-3-and-2-5/grid-rotator" target="_blank"><b>Grid Rotator Joomla Extension</b></a>.</span><br />
+			
+			</td>
+
+		
+			</table>
+			<br /><br />]]>
+	
+	</description>
+    <files>
+       <filename>mod_revol_slider.xml</filename>
+        <filename module="mod_revol_slider">mod_revol_slider.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+    </files>
+    <config>
+		<fields name="params">
+			<fieldset name="Advanced">
+				<field name="loadjquery" type="radio" class="btn-group btn-group-yesno" default="0" label="Load Jquery lib" description="choose to enable or disable loading jquery library">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="moduleclass_sfx" type="textarea" rows="3" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="imageheight" type="text" default="900" label="Height of slider" description="Height of the slider" />
+				<field name="slidedelay" type="text" default="4000" label="delay of slider" description="delay of the images slider" />
+				<field name="titlesize" type="text" default="55px" label="Title size" description="Title size" />
+				<field name="textsize" type="text" default="20px" label="Text size" description="Text size" />
+				<field name="titlecolor" type="color" default="#fff" label="Title Color" description="" />
+				<field name="textcolor" type="color" default="#fff" label="Text Color" description="" />
+				<field name="titletransform" type="list" class="btn-group btn-group-yesno" default="uppercase" label="Aspect title:" description="">
+				    <option value="uppercase">uppercase</option>
+					<option value="capitalize">capitalize</option>
+				</field>
+
+				<field name="texttransform" type="list" class="btn-group btn-group-yesno" default="capitalize" label="Aspect text:" description="">
+				    <option value="capitalize">capitalize</option>
+					<option value="uppercase">uppercase</option>
+				</field>
+
+				<field name="font" type="list" class="btn-group btn-group-yesno" default="Open Sans" label="Font Family" description="">
+				<option value="Abel, sans-serif">Abel</option>
+				<option value="Arial, sans-serif">Arial</option>
+				<option value="Comfortaa">Comfortaa</option>
+				<option value="Dosis, sans-serif">Dosis</option>
+				<option value="Droid Sans, sans-serif">Droid Sans</option>
+				<option value="Francois One, sans-serif">Francois One</option>
+				<option value="Georgia, serif">Georgia</option>
+				<option value="Helvetica, sans-serif">Helvetica</option>
+				<option value="Lato, sans-serif">Lato</option>
+				<option value="Lobster, sans-serif">Lobster</option>
+				<option value="Lora, sans-serif">Lora</option>
+				<option value="Open Sans Condensed, sans-serif">Open Sans Condensed</option>
+				<option value="Open Sans, sans-serif">Open Sans</option>
+				<option value="Oswald, sans-serif">Oswald</option>
+				<option value="Oxygen, sans-serif">Oxygen</option>
+				<option value="PT Sans Narrow, sans-serif">PT Sans Narrow</option>
+				<option value="PT Sans,">PT Sans</option>
+				<option value="Prosto One, cursive">Prosto One</option>
+				<option value="Quicksand, sans-serif">Quicksand</option>
+				<option value="Raleway, sans-serif">Raleway</option>
+				<option value="Roboto Condensed, sans-serif">Roboto Condensed</option>
+				<option value="Roboto, sans-serif">Roboto</option>
+				<option value="Share, cursive">Share</option>
+				<option value="Source Sans Pro, sans-serif">Source Sans Pro</option>
+				<option value="Times New Roman, sans-serif">Times New Roman</option>
+				<option value="Ubuntu Condensed, sans-serif">Ubuntu Condensed</option>
+				<option value="Ubuntu, sans-serif">Ubuntu</option>
+				<option value="Verdana, sans-serif">Verdana</option>
+			</field>
+
+				<field type="spacer" name="spacer1" hr="true" />
+				<field name="enableitem1" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #1" description="To Enable this item choose YES ">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="transition1" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+					<option value="boxslide">boxslide</option>
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+					<option value="slotslide-vertical">slotslide-vertical</option>
+					<option value="curtain-1">curtain-1</option>
+					<option value="curtain-2">curtain-2</option>
+					<option value="curtain-3">curtain-3</option>
+					<option value="slideleft">slideleft</option>
+					<option value="slideright">slideright</option>
+					<option value="slideup">slideup</option>
+					<option value="slidedown">slidedown</option>
+				</field>
+
+			    <field name="speed1" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+				<field name="img1" type="media" default="" label="Image of the Item #1" description=""  />
+				<field name="title1" type="text" default="" label="Title of slider" description="Title of the slider" />
+				<field name="titleposition1" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+				<field name="text1" type="text" default="" label="Text of slider" description="Text of the slider" />
+				<field name="textposition1" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+				<field name="titleffect1" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+					<option value="sft">Short from Top</option>
+					<option value="sfb">Short from Bottom</option>
+					<option value="sfr">Short from Right</option>
+					<option value="sfl">Short from Left</option>
+					<option value="lft">Long from Top</option>
+					<option value="lfb">Long from Bottom</option>
+					<option value="lfr">Long from Right</option>
+					<option value="lfl">Long from Left</option>
+				</field>
+
+				<field name="variation1" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+
+				<field name="texteffect1" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+					<option value="sft">Short from Top</option>
+					<option value="sfb">Short from Bottom</option>
+					<option value="sfr">Short from Right</option>
+					<option value="sfl">Short from Left</option>
+					<option value="lft">Long from Top</option>
+					<option value="lfb">Long from Bottom</option>
+					<option value="lfr">Long from Right</option>
+					<option value="lfl">Long from Left</option>
+				</field>
+
+				<field type="spacer" name="spacer2" hr="true" />
+				<field name="enableitem2" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item#2" description="To Enable this item choose YES ">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="transition2" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+					<option value="boxslide">boxslide</option>
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+					<option value="slotslide-vertical">slotslide-vertical</option>
+					<option value="curtain-1">curtain-1</option>
+					<option value="curtain-2">curtain-2</option>
+					<option value="curtain-3">curtain-3</option>
+					<option value="slideleft">slideleft</option>
+					<option value="slideright">slideright</option>
+					<option value="slideup">slideup</option>
+					<option value="slidedown">slidedown</option>
+				</field>
+
+			    <field name="speed2" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+				<field name="img2" type="media" default="" label="Image of the Item #2" description=""  />
+				<field name="title2" type="text" default="" label="Title of slider 2" description="Title of the slider" />
+				<field name="text2" type="text" default="" label="Text of slider 2" description="Text of the slider" />
+				<field name="titleposition2" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+				<field name="textposition2" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+				<field name="titleffect2" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+					<option value="sft">Short from Top</option>
+					<option value="sfb">Short from Bottom</option>
+					<option value="sfr">Short from Right</option>
+					<option value="sfl">Short from Left</option>
+					<option value="lft">Long from Top</option>
+					<option value="lfb">Long from Bottom</option>
+					<option value="lfr">Long from Right</option>
+					<option value="lfl">Long from Left</option>
+				</field>
+
+				<field name="variation2" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+
+				<field name="texteffect2" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+					<option value="sft">Short from Top</option>
+					<option value="sfb">Short from Bottom</option>
+					<option value="sfr">Short from Right</option>
+					<option value="sfl">Short from Left</option>
+					<option value="lft">Long from Top</option>
+					<option value="lfb">Long from Bottom</option>
+					<option value="lfr">Long from Right</option>
+					<option value="lfl">Long from Left</option>
+				</field>
+
+				<field type="spacer" name="spacer3" hr="true" />
+				<field name="enableitem3" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #3" description="To Enable this item choose YES ">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<field name="transition3" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+					<option value="boxslide">boxslide</option>
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+					<option value="slotslide-vertical">slotslide-vertical</option>
+					<option value="curtain-1">curtain-1</option>
+					<option value="curtain-2">curtain-2</option>
+					<option value="curtain-3">curtain-3</option>
+					<option value="slideleft">slideleft</option>
+					<option value="slideright">slideright</option>
+					<option value="slideup">slideup</option>
+					<option value="slidedown">slidedown</option>
+				</field>
+
+			    <field name="speed3" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+				<field name="img3" type="media" default="" label="Image of the Item #3" description=""  />
+				<field name="title3" type="text" default="" label="Title of slider 3" description="Title of the slider" />
+				<field name="text3" type="text" default="" label="Text of slider 3" description="Text of the slider" />
+				<field name="titleposition3" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+				<field name="textposition3" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+				<field name="titleffect3" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+					<option value="sft">Short from Top</option>
+					<option value="sfb">Short from Bottom</option>
+					<option value="sfr">Short from Right</option>
+					<option value="sfl">Short from Left</option>
+					<option value="lft">Long from Top</option>
+					<option value="lfb">Long from Bottom</option>
+					<option value="lfr">Long from Right</option>
+					<option value="lfl">Long from Left</option>
+				</field>
+
+				<field name="variation3" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+				</field>
+
+				<field name="texteffect3" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+					<option value="sft">Short from Top</option>
+					<option value="sfb">Short from Bottom</option>
+					<option value="sfr">Short from Right</option>
+					<option value="sfl">Short from Left</option>
+					<option value="lft">Long from Top</option>
+					<option value="lfb">Long from Bottom</option>
+					<option value="lfr">Long from Right</option>
+					<option value="lfl">Long from Left</option>
+				</field>
+
+				<field type="spacer" name="spacer4" hr="true" />
+
+				<field name="enableitem4" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #4" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition4" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed4" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img4" type="media" default="" label="Image of the Item #4" description=""  />
+
+				<field name="title4" type="text" default="" label="Title of slider 4" description="Title of the slider" />
+
+				<field name="text4" type="text" default="" label="Text of slider 4" description="Text of the slider" />
+
+				<field name="titleposition4" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition4" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect4" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation4" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect4" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				
+
+				<field type="spacer" name="spacer5" hr="true" />
+
+				<field name="enableitem5" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #5" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition5" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed5" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img5" type="media" default="" label="Image of the Item #5" description=""  />
+
+				<field name="title5" type="text" default="" label="Title of slider 5" description="Title of the slider" />
+
+				<field name="text5" type="text" default="" label="Text of slider 5" description="Text of the slider" />
+
+				<field name="titleposition5" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition5" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect5" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation5" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect5" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				
+
+				<field type="spacer" name="spacer6" hr="true" />
+
+				<field name="enableitem6" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #6" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition6" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed6" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img6" type="media" default="" label="Image of the Item #6" description=""  />
+
+				<field name="title6" type="text" default="" label="Title of slider 6" description="Title of the slider" />
+
+				<field name="text6" type="text" default="" label="Text of slider 6" description="Text of the slider" />
+
+				<field name="titleposition6" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition6" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect6" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation6" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect6" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				
+
+				<field type="spacer" name="spacer7" hr="true" />
+
+				<field name="enableitem7" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #7" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition7" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed7" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img7" type="media" default="" label="Image of the Item #7" description=""  />
+
+				<field name="title7" type="text" default="" label="Title of slider 7" description="Title of the slider" />
+
+				<field name="text7" type="text" default="" label="Text of slider 7" description="Text of the slider" />
+
+				<field name="titleposition7" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition7" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect7" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation7" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect7" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				
+
+				<field type="spacer" name="spacer8" hr="true" />
+
+				<field name="enableitem8" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #8" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition8" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed8" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img8" type="media" default="" label="Image of the Item #8" description=""  />
+
+				<field name="title8" type="text" default="" label="Title of slider 8" description="Title of the slider" />
+
+				<field name="text8" type="text" default="" label="Text of slider 8" description="Text of the slider" />
+
+				<field name="titleposition8" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition8" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect8" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation8" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect8" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				
+
+				<field type="spacer" name="spacer9" hr="true" />
+
+				<field name="enableitem9" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #9" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition9" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed9" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img9" type="media" default="" label="Image of the Item #9" description=""  />
+
+				<field name="title9" type="text" default="" label="Title of slider 9" description="Title of the slider" />
+
+				<field name="text9" type="text" default="" label="Text of slider 9" description="Text of the slider" />
+
+				<field name="titleposition9" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition9" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect9" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation9" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect9" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				
+
+				<field type="spacer" name="spacer10" hr="true" />
+
+				<field name="enableitem10" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #10" description="To Enable this item choose YES ">
+
+					<option value="1">JYES</option>
+
+					<option value="0">JNO</option>
+
+				</field>
+
+				<field name="transition10" type="list" class="btn-group btn-group-yesno" default="" label="image effect:" description="">
+
+					<option value="boxslide">boxslide</option>
+
+					<option value="slotzoom-horizontal">slotzoom-horizontal</option>
+
+					<option value="slotzoom-vertical">slotzoom-vertical</option>
+
+					<option value="slotslide-vertical">slotslide-vertical</option>
+
+					<option value="curtain-1">curtain-1</option>
+
+					<option value="curtain-2">curtain-2</option>
+
+					<option value="curtain-3">curtain-3</option>
+
+					<option value="slideleft">slideleft</option>
+
+					<option value="slideright">slideright</option>
+
+					<option value="slideup">slideup</option>
+
+					<option value="slidedown">slidedown</option>
+
+				</field>
+
+			    <field name="speed10" type="text" default="500" label="Speed of slider" description="lenght of the sliding effect in milliseconds" />
+
+				<field name="img10" type="media" default="" label="Image of the Item #10" description=""  />
+
+				<field name="title10" type="text" default="" label="Title of slider 10" description="Title of the slider" />
+
+				<field name="text10" type="text" default="" label="Text of slider 10" description="Text of the slider" />
+
+				<field name="titleposition10" type="text" default="240" label="Title position in slider" description="Title position in the slider" />
+
+				<field name="textposition10" type="text" default="320" label="Text position in slider" description="Text position in the slider" />
+
+				<field name="titleffect10" type="list" class="btn-group btn-group-yesno" default="sft" label="Title effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+				<field name="variation10" type="list" class="btn-group btn-group-yesno" default="easeOutBack" label="Title variation:" description="">
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInQuad">easeInQuad</option>
+
+					<option value="easeOutQuad">easeOutQuad</option>
+
+					<option value="easeInOutQuad">easeInOutQuad</option>
+
+					<option value="easeInCubic">easeInCubic</option>
+
+					<option value="easeOutCubic">easeOutCubic</option>
+
+					<option value="easeInOutCubic">easeInOutCubic</option>
+
+					<option value="easeInQuart">easeInQuart</option>
+
+					<option value="easeOutQuart">easeOutQuart</option>
+
+					<option value="easeInOutQuart">easeInOutQuart</option>
+
+					<option value="easeInQuint">easeInQuint</option>
+
+					<option value="easeOutQuint">easeOutQuint</option>
+
+					<option value="easeInOutQuint">easeInOutQuint</option>
+
+					<option value="easeInSine">easeInSine</option>
+
+					<option value="easeOutSine">easeOutSine</option>
+
+					<option value="easeInOutSine">easeInOutSine</option>
+
+					<option value="easeInExpo">easeInExpo</option>
+
+					<option value="easeOutExpo">easeOutExpo</option>
+
+					<option value="easeInOutExpo">easeInOutExpo</option>
+
+					<option value="easeInCirc">easeInCirc</option>
+
+					<option value="easeOutCirc">easeOutCirc</option>
+
+					<option value="easeInOutCirc">easeInOutCirc</option>
+
+					<option value="easeInElastic">easeInElastic</option>
+
+					<option value="easeOutElastic">easeOutElastic</option>
+
+					<option value="easeInOutElastic">easeInOutElastic</option>
+
+					<option value="easeOutBack">easeOutBack</option>
+
+					<option value="easeInOutBack">easeInOutBack</option>
+
+					<option value="easeInBounce">easeInBounce</option>
+
+					<option value="easeOutBounce">easeOutBounce</option>
+
+					<option value="easeInOutBounce">easeInOutBounce</option>
+
+				</field>
+
+				<field name="texteffect10" type="list" class="btn-group btn-group-yesno" default="sft" label="Text effect:" description="">
+
+					<option value="sft">Short from Top</option>
+
+					<option value="sfb">Short from Bottom</option>
+
+					<option value="sfr">Short from Right</option>
+
+					<option value="sfl">Short from Left</option>
+
+					<option value="lft">Long from Top</option>
+
+					<option value="lfb">Long from Bottom</option>
+
+					<option value="lfr">Long from Right</option>
+
+					<option value="lfl">Long from Left</option>
+
+				</field>
+
+			</fieldset>	
+
+		</fields>
+
+    </config>
+
+</extension>
