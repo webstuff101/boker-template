@@ -1,6 +1,11 @@
 <?php
 /**
-T4 Overide
+ * Boker Template Category Portfolio Layout for Joomla 6
+ * 
+ * @package     Joomla.Site
+ * @subpackage  Templates.Boker
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later
  */
 
 defined('_JEXEC') or die;
@@ -9,19 +14,16 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Layout\FileLayout;
-if(!class_exists('ContentHelperRoute')){
-	if(version_compare(JVERSION, '4', 'ge')){
-		abstract class ContentHelperRoute extends \Joomla\Component\content\Site\Helper\RouteHelper{};
-	}else{
-		JLoader::register('ContentHelperRoute', $com_path . '/helpers/route.php');
-	}
-}
-//compatible params on joomla 4
+use Joomla\CMS\Uri\Uri;
+use Joomla\Component\Content\Site\Helper\RouteHelper;
+
+// Compatible params on Joomla 4/5/6
 $this->columns = !empty($this->columns) ? $this->columns : $this->params->get('num_columns');
 $this->blog_class_leading = $this->params->get('blog_class_leading','');
 $this->blog_class = $this->params->get('blog_class','');
 
 $app = Factory::getApplication();
+$doc = Factory::getDocument();
 
 $this->category->text = $this->category->description;
 $app->triggerEvent('onContentPrepare', array($this->category->extension . '.categories', &$this->category, &$this->params, 0));
@@ -38,14 +40,12 @@ $afterDisplayContent = trim(implode("\n", $results));
 
 $htag    = $this->params->get('show_page_heading') ? 'h2' : 'h1';
 
-
 // Add css files for the galleryimagepro component and categories if they exist
-$this->document->addStyleSheet(JUri::root().'templates/boker/galleryimagespro/css/site_galleryimagepro.css');
-$this->document->addStyleSheet(JUri::root().'templates/boker/galleryimagespro/css/responsive-gallery.css');
-$this->document->addStyleSheet(JUri::root().'templates/boker/galleryimagespro/css/prettyphoto/pretty.css');
+$doc->addStyleSheet(Uri::root() . 'templates/boker/galleryimagespro/css/site_galleryimagepro.css');
+$doc->addStyleSheet(Uri::root() . 'templates/boker/galleryimagespro/css/responsive-gallery.css');
+$doc->addStyleSheet(Uri::root() . 'templates/boker/galleryimagespro/css/prettyphoto/pretty.css');
 
-$this->document->addScript(JUri::root() .'templates/boker/galleryimagespro/js/jquery.js');
-$this->document->addScript(JUri::root() .'templates/boker/galleryimagespro/js/pretty.js');
+$doc->addScript(Uri::root() . 'templates/boker/galleryimagespro/js/pretty.js');
 
 // init columns value if not set
 if (empty($this->columns)) $this->columns = 1;

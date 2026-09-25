@@ -1,6 +1,11 @@
 <?php
 /**
-T4 Overide
+ * Boker Template Category Blog Layout for Joomla 6
+ * 
+ * @package     Joomla.Site
+ * @subpackage  Templates.Boker
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later
  */
 
 defined('_JEXEC') or die;
@@ -9,14 +14,9 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Layout\FileLayout;
-if(!class_exists('ContentHelperRoute')){
-	if(version_compare(JVERSION, '4', 'ge')){
-		abstract class ContentHelperRoute extends \Joomla\Component\content\Site\Helper\RouteHelper{};
-	}else{
-		JLoader::register('ContentHelperRoute', $com_path . '/helpers/route.php');
-	}
-}
-//compatible params on joomla 4
+use Joomla\Component\Content\Site\Helper\RouteHelper;
+
+// Compatible params on Joomla 4/5/6
 $this->columns = !empty($this->columns) ? $this->columns : $this->params->get('num_columns');
 $this->blog_class_leading = $this->params->get('blog_class_leading','');
 $this->blog_class = $this->params->get('blog_class','');
