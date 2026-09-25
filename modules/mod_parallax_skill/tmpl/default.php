@@ -14,10 +14,6 @@ $modURL 	= JURI::base().'modules/mod_parallax_skill';
 ?>
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/responsive-mod.css" type="text/css" />
-<link rel="stylesheet" href="<?php echo $modURL; ?>/assets/font-awesome/css/font-awesome.css" type="text/css" />
-
-
-
 
  <section class="padding-top-big padding-bottom-middle text-center" data-parallax="<?php echo $ParallaxSkillOptionsParams['ImageParallax']; ?>">
  <div class="parallax-skill"><?php echo $gtme; ?></div>

@@ -1,7 +1,4 @@
-/* Font imports */
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800);
-
- .overlay {
+.overlay {
     display: block;
     position: absolute;
     top: 0;
@@ -13,7 +10,7 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
- .full-max-image,
+.full-max-image,
 .full-width-image {
     max-width: 100%;
     margin: 0 auto;
@@ -30,9 +27,10 @@
 h5.white  {
     font-size: 16px;
     margin: 20px 0 37px 0;
-font-family: 'Raleway',sans-serif;
+    font-family: 'Raleway',sans-serif;
 }
- section,
+
+section,
 section > .main-content {
     position: relative;
 }
@@ -70,6 +68,3 @@ section > .main-content {
 .facts .count {
   color: #fe7e17;
 }
-
-
-.

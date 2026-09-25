@@ -157,7 +157,7 @@ content: '<?php echo $this->params->get('slogan')?>';
 			
 			<div class="grid_3">
                         <div id="sitename">
-			        <a href="index.php">
+			        <a href="/">
 						<?php if ($logo) : ?>
 							<img src="<?php echo $this->baseurl ?>/<?php echo htmlspecialchars($logo); ?>" alt="<?php echo htmlspecialchars($templateparams->get('sitetitle'));?>" />
 						<?php endif;?>
@@ -326,7 +326,7 @@ content: '<?php echo $this->params->get('slogan')?>';
 	<div id="block-footer">
 	<div class="container_12">
 			<div class="copyright" data-scrollReveal="enter top over 0.8s">
-			    <?php echo date( 'Y' ); ?>&nbsp; <?php echo $csite_name; ?>
+			    <?php echo date( 'Y' ); ?>&nbsp; <?php echo $csite_name; ?> | <span style="color: #ff9900;"><a href="/impressum-und-datenschutz.html" style="color: #ff9900;">Impressum &amp; Datenschutz</a></span>
 			</div>
 	</div>
 	</div>
@@ -345,7 +345,5 @@ content: '<?php echo $this->params->get('slogan')?>';
 window.scrollReveal = new scrollReveal();			
 </script>
  
-
-<script type="text/javascript"><?php echo $this->params->get('tracking_code')?></script>
 </body>
 </html>

@@ -1,10 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic);
-@import url(http://fonts.googleapis.com/css?family=Satisfy);
-
 .dt-scroll-content, figure, figcaption{
 background:transparent;
 border:0;
@@ -24,7 +20,7 @@ width:300px;
 height:300px;
 background:cover;
 margin:0 !important;
-padding:0 !important:
+padding:0 !important;
 }
 
 
@@ -34,18 +30,12 @@ padding:0 !important:
 .portfolio-c img, .portfolio-c:hover figcaption, 
 .portfolio-c .fig-content span.image-overlay-inside::before, 
 .portfolio-c .fig-content span.image-overlay-inside:hover::before { 
--webkit-transition:all 300ms linear 0s; 
--moz-transition:all 300ms linear 0s; 
--o-transition:all 300ms linear 0s; 
--ms-transition:all 300ms linear 0s; 
 transition:all 300ms linear 0s; 
 }
 	
 .portfolio-c { 
 overflow: hidden; 
 transition: all 300ms linear 0s; 
--webkit-transition: all 300ms linear 0s; 
--moz-transition: all 300ms linear 0s;  
 } 
 
 .portfolio-c figure img { 
@@ -53,8 +43,6 @@ float: left;
 position: relative; 
 width: 100%; 
 transform: translate3d(-30px, 0px, 0px) scale(1.12); 
--webkit-transform: translate3d(-30px, 0px, 0px) scale(1.12); 
--moz-transform: translate3d(-30px, 0px, 0px) scale(1.12); 
 }
 
 .portfolio-c figcaption { 
@@ -79,10 +67,6 @@ position: absolute;
 right: 0; 
 top: 0; 
 box-shadow: 0 0 0 1px #FFFFFF inset; 
- -moz-box-shadow: 0 0 0 1px #FFFFFF inset; 
--webkit-box-shadow: 0 0 0 1px #FFFFFF inset;
--o-box-shadow: 0 0 0 1px #FFFFFF inset; 
--ms-box-shadow: 0 0 0 1px #FFFFFF inset;
 }	
 
 .portfolio-c:hover figcaption { 
@@ -91,8 +75,7 @@ opacity: 1;
 
 .portfolio-c:hover img { 
 transform: translate3d(0px, 0px, 0px) scale(1); 
--webkit-transform: translate3d(0px, 0px, 0px) scale(1); 
--moz-transform: translate3d(0px, 0px, 0px) scale(1); 
+translate3d(0px, 0px, 0px) scale(1); 
 }
 
 .fig-content { 
@@ -173,11 +156,7 @@ display:block;
 }
 
 .portfolio-c:hover .fig-content .image-overlay-inside { 
--webkit-animation:avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
--moz-animation:avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); 
 animation:avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); 
--o-animation:avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
--ms-animation:avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); 
  }
 	
 .portfolio-c .fig-content .image-overlay-inside { 
@@ -186,44 +165,12 @@ animation:avia_pop_small 0.5s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275);
 content: "\f002";
 }
 	
-	@-webkit-keyframes avia_pop {
-			0% {
-				-webkit-transform:scale(0.8)
-			}
-			100% {
-				-webkit-transform:scale(1)
-			}
-		}
-		@-moz-keyframes avia_pop {
-			0% {
-				-moz-transform:scale(0.8)
-			}
-			100% {
-				-moz-transform:scale(1)
-			}
-		}
 		@keyframes avia_pop {
 			0% {
 				transform:scale(0.8)
 			}
 			100% {
 				transform:scale(1)
-			}
-		}
-		@-webkit-keyframes avia_pop_small {
-			0% {
-				-webkit-transform:rotate(-175deg) scale(0.2)
-			}
-			100% {
-				-webkit-transform:rotate(0deg) scale(1)
-			}
-		}
-		@-moz-keyframes avia_pop_small {
-			0% {
-				-moz-transform:rotate(-175deg) scale(0.2)
-			}
-			100% {
-				-moz-transform:rotate(0deg) scale(1)
 			}
 		}
 		@keyframes avia_pop_small {
@@ -234,8 +181,6 @@ content: "\f002";
 				transform:rotate(0deg) scale(1)
 			}
 		}
-	
-		
 	
 #dt-scroll-content { 
 display: inline-block;

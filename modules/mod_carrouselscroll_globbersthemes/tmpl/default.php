@@ -12,7 +12,7 @@ $modURL 	= JURI::base().'modules/mod_carrouselscroll_globbersthemes';
 
 ?>
 
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"> 
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"> 
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/css/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/prettyphoto/pretty.css" type="text/css" />
 

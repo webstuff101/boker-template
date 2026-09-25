@@ -78,37 +78,6 @@
 					<option value="uppercase">uppercase</option>
 				</field>
 
-				<field name="font" type="list" class="btn-group btn-group-yesno" default="Open Sans" label="Font Family" description="">
-				<option value="Abel, sans-serif">Abel</option>
-				<option value="Arial, sans-serif">Arial</option>
-				<option value="Comfortaa">Comfortaa</option>
-				<option value="Dosis, sans-serif">Dosis</option>
-				<option value="Droid Sans, sans-serif">Droid Sans</option>
-				<option value="Francois One, sans-serif">Francois One</option>
-				<option value="Georgia, serif">Georgia</option>
-				<option value="Helvetica, sans-serif">Helvetica</option>
-				<option value="Lato, sans-serif">Lato</option>
-				<option value="Lobster, sans-serif">Lobster</option>
-				<option value="Lora, sans-serif">Lora</option>
-				<option value="Open Sans Condensed, sans-serif">Open Sans Condensed</option>
-				<option value="Open Sans, sans-serif">Open Sans</option>
-				<option value="Oswald, sans-serif">Oswald</option>
-				<option value="Oxygen, sans-serif">Oxygen</option>
-				<option value="PT Sans Narrow, sans-serif">PT Sans Narrow</option>
-				<option value="PT Sans,">PT Sans</option>
-				<option value="Prosto One, cursive">Prosto One</option>
-				<option value="Quicksand, sans-serif">Quicksand</option>
-				<option value="Raleway, sans-serif">Raleway</option>
-				<option value="Roboto Condensed, sans-serif">Roboto Condensed</option>
-				<option value="Roboto, sans-serif">Roboto</option>
-				<option value="Share, cursive">Share</option>
-				<option value="Source Sans Pro, sans-serif">Source Sans Pro</option>
-				<option value="Times New Roman, sans-serif">Times New Roman</option>
-				<option value="Ubuntu Condensed, sans-serif">Ubuntu Condensed</option>
-				<option value="Ubuntu, sans-serif">Ubuntu</option>
-				<option value="Verdana, sans-serif">Verdana</option>
-			</field>
-
 				<field type="spacer" name="spacer1" hr="true" />
 				<field name="enableitem1" type="radio" class="btn-group btn-group-yesno" default="0" label="Enable or Disable the item #1" description="To Enable this item choose YES ">
 					<option value="1">JYES</option>

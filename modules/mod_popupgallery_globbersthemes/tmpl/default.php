@@ -12,9 +12,6 @@ $modURL 	= JURI::base().'modules/mod_popupgallery_globbersthemes';
 
 ?>
 
- 
-
-<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet"> 
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/style.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $modURL; ?>/assets/prettyphoto/pretty.css" type="text/css" />
 <script type="text/javascript" src="<?php echo $modURL; ?>/assets/prettyphoto/pretty.js"></script>
