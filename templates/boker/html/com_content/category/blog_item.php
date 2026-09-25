@@ -1,27 +1,27 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  Templates.beez3
+ * @subpackage  Templates.Boker
  *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 defined('_JEXEC') or die;
 
-$params =& $this->item->params;
-$images = json_decode($this->item->images);
-$app = JFactory::getApplication();
-$canEdit = $this->item->params->get('access-edit');
-
-JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
-
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Associations;
+use Joomla\CMS\Language\Text;
 use Joomla\CMS\Layout\LayoutHelper;
+use Joomla\CMS\HTML\HTMLHelper;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Uri\Uri;
 use Joomla\Component\Content\Administrator\Extension\ContentComponent;
 use Joomla\Component\Content\Site\Helper\RouteHelper;
+
+$params =& $this->item->params;
+$images = json_decode($this->item->images);
+$app = Factory::getApplication();
+$canEdit = $this->item->params->get('access-edit');
 
 // Check if associations are implemented. If they are, define the parameter.
 $assocParam = (Associations::isEnabled() && $params->get('show_associations'));
@@ -30,38 +30,38 @@ $currentDate   = Factory::getDate()->format('Y-m-d H:i:s');
 $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED || $this->item->publish_up > $currentDate)
 	|| ($this->item->publish_down < $currentDate && $this->item->publish_down !== null);
 
-	
-	
-	
+$nowDate = Factory::getDate()->toSql();
 
-
-
-
-	
-	
-	
-	
-	
-	
-	
-	
 ?>
 
 
 
 
-<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
-	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
+
+
+
+
+
+
+
+
+
+
+
+
+<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime($nowDate)
+	|| ((strtotime($this->item->publish_down) < strtotime($nowDate)) && $this->item->publish_down != Factory::getDbo()->getNullDate())) : ?>
 <div class="system-unpublished"></div>
 <?php endif; ?>
+
 
 
 
 <div class="article-blog" data-scrollReveal="enter from the top after 0.3s ease-out">
 <?php if ($params->get('show_publish_date')) : ?>	
 	<aside>
-		<time datetime="<?php echo JHtml::_('date', $this->item->publish_up, 'Y-m-d'); ?>">
-			<div class="day"><?php echo JHtml::_('date', $this->item->publish_up, JText::_('d M Y')); ?></div>
+		<time datetime="<?php echo HTMLHelper::_('date', $this->item->publish_up, 'Y-m-d'); ?>">
+			<div class="day"><?php echo HTMLHelper::_('date', $this->item->publish_up, Text::_('d M Y')); ?></div>
 		</time>
 	</aside>
 	
@@ -69,12 +69,11 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 
     <h2 class="article-header-blog">
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
-			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid)); ?>"> <?php echo $this->escape($this->item->title); ?></a>
+			<a href="<?php echo Route::_(RouteHelper::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>"> <?php echo $this->escape($this->item->title); ?></a>
 				<?php else : ?>
 				<?php echo $this->escape($this->item->title); ?>
 				<?php endif; ?>
 	</h2>
-	
 	
 		
 <?php if (($params->get('show_author')) or ($params->get('show_category')) or ($params->get('show_create_date')) or ($params->get('show_modify_date'))  or ($params->get('show_parent_category')) or ($params->get('show_hits'))) : ?>
@@ -82,42 +81,41 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 	
 	<span class="article-info">
 	
-        <dt class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
+        <dt class="article-info-term"><?php echo Text::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 <?php endif; ?>
 
 
                <?php if ($params->get('show_parent_category') && $this->item->catid != '1:root') : ?>
 					<?php $title = $this->escape($this->item->parent_title);
-					$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->parent_id)).'">'.$title.'</a>';?>
+					$url = '<a href="'.Route::_(RouteHelper::getCategoryRoute($this->item->parent_id, $this->item->language)).'">'.$title.'</a>';?>
 					<?php if ($params->get('link_parent_category') and $this->item->parent_id) : ?>
-						<dt class="parent-category-name"><?php echo JText::sprintf('COM_CONTENT_PARENT', '</dt><dd class="parent-category-name" >' . $url . '</dd>'); ?>
+						<dt class="parent-category-name"><?php echo Text::sprintf('COM_CONTENT_PARENT', '</dt><dd class="parent-category-name" >' . $url . '</dd>'); ?>
 					<?php else : ?>
-						<dt class="parent-category-name"><?php echo JText::sprintf('COM_CONTENT_PARENT', '</dt><dd class="parent-category-name">' . $title . '</dd>'); ?>
+						<dt class="parent-category-name"><?php echo Text::sprintf('COM_CONTENT_PARENT', '</dt><dd class="parent-category-name">' . $title . '</dd>'); ?>
 					<?php endif; ?>
 				<?php endif; ?>
 
               
 
-
                 <?php if ($params->get('show_category')) : ?>
 					<?php $title = $this->escape($this->item->category_title);
-					$url = '<a href="'.JRoute::_(ContentHelperRoute::getCategoryRoute($this->item->catid)).'">'.$title.'</a>';?>
+					$url = '<a href="'.Route::_(RouteHelper::getCategoryRoute($this->item->catid, $this->item->language)).'">'.$title.'</a>';?>
 					
 					<?php if ($params->get('link_category') and $this->item->catid) : ?>
-					<dt class="category-name"><?php echo JText::sprintf('COM_CONTENT_CATEGORY', '</dt><dd class="category-name">' . $url . '</dd>'); ?>
+					<dt class="category-name"><?php echo Text::sprintf('COM_CONTENT_CATEGORY', '</dt><dd class="category-name">' . $url . '</dd>'); ?>
 					<?php else : ?>
-					<dt class="category-name"><?php echo JText::sprintf('COM_CONTENT_CATEGORY', '</dt><dd class="category-name">' . $title . '</dd>'); ?>
+					<dt class="category-name"><?php echo Text::sprintf('COM_CONTENT_CATEGORY', '</dt><dd class="category-name">' . $title . '</dd>'); ?>
 					<?php endif; ?>
 				<?php endif; ?>
 				
 				
 				<?php if ($params->get('show_create_date')) : ?>
-				     <dt class="create"><?php echo JText::sprintf('COM_CONTENT_CREATED_DATE_ON', '</dt><dd class="create">' . JHtml::_('date', $this->item->created, JText::_('DATE_FORMAT_LC3')) . '</dd>'); ?>
+				     <dt class="create"><?php echo Text::sprintf('COM_CONTENT_CREATED_DATE_ON', '</dt><dd class="create">' . HTMLHelper::_('date', $this->item->created, Text::_('DATE_FORMAT_LC3')) . '</dd>'); ?>
 				<?php endif; ?>
 
 
                 <?php if ($params->get('show_modify_date')) : ?>
-				    <dt class="modified"><?php echo JText::sprintf('COM_CONTENT_LAST_UPDATED', '</dt><dd class="modified">' . JHtml::_('date', $this->item->modified, JText::sprintf('DATE_FORMAT_LC3')) . '</dd>'); ?>
+				    <dt class="modified"><?php echo Text::sprintf('COM_CONTENT_LAST_UPDATED', '</dt><dd class="modified">' . HTMLHelper::_('date', $this->item->modified, Text::sprintf('DATE_FORMAT_LC3')) . '</dd>'); ?>
 				<?php endif; ?>
 
     
@@ -127,13 +125,13 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 				<?php if (!empty($this->item->contactid) && $params->get('link_author') == true): ?>
 					<?php
 						$needle = 'index.php?option=com_contact&view=contact&id=' . $this->item->contactid;
-						$menu = JFactory::getApplication()->getMenu();
+						$menu = $app->getMenu();
 						$item = $menu->getItems('link', $needle, true);
 						$cntlink = !empty($item) ? $needle . '&Itemid=' . $item->id : $needle;
 					?>
-					<dt class="createdby"><?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', '</dt><dd class="createdby">' . JHtml::_('link', JRoute::_($cntlink), $author) . '</dd>'); ?>
+					<dt class="createdby"><?php echo Text::sprintf('COM_CONTENT_WRITTEN_BY', '</dt><dd class="createdby">' . HTMLHelper::_('link', Route::_($cntlink), $author) . '</dd>'); ?>
 				<?php else: ?>
-					<dt class="createdby"><?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', '</dt><dd class="createdby">' . $author . '</dd>'); ?>
+					<dt class="createdby"><?php echo Text::sprintf('COM_CONTENT_WRITTEN_BY', '</dt><dd class="createdby">' . $author . '</dd>'); ?>
 				<?php endif; ?>
 				
 			
@@ -143,7 +141,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 	
 	
 	<?php if ($params->get('show_hits')) : ?>
-				<dt class="hits"><?php echo JText::sprintf('COM_CONTENT_ARTICLE_HITS', '</dt><dd class="hits">' . $this->item->hits . '</dd>'); ?>
+				<dt class="hits"><?php echo Text::sprintf('COM_CONTENT_ARTICLE_HITS', '</dt><dd class="hits">' . $this->item->hits . '</dd>'); ?>
 				<?php endif; ?>
 	
 
@@ -156,8 +154,8 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 	
 		
 	
-<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
-	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
+<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime($nowDate)
+	|| ((strtotime($this->item->publish_down) < strtotime($nowDate)) && $this->item->publish_down != Factory::getDbo()->getNullDate())) : ?>
 
 <?php endif; ?>
 <?php endif; ?>
@@ -208,7 +206,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 		if ($params->get('access-view')) :
 			$link = Route::_(RouteHelper::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
 		else :
-			$menu = Factory::getApplication()->getMenu();
+			$menu = $app->getMenu();
 			$active = $menu->getActive();
 			$itemId = $active->id;
 			$link = new Uri(Route::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
@@ -227,7 +225,6 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 
 
 
-
 		
 
 
@@ -237,7 +234,7 @@ $isUnpublished = ($this->item->state == ContentComponent::CONDITION_UNPUBLISHED 
 	
 	<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
 	<div class="tag-article"><span>tags:</span>
-		<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+		<?php echo LayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
 	</div>
 	<?php endif; ?>
 

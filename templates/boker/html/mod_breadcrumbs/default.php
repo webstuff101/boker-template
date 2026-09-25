@@ -1,21 +1,23 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  mod_breadcrumbs
+ * @subpackage  Templates.Boker
  *
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
-JHtml::_('bootstrap.tooltip');
-$app = JFactory::getApplication();
+use Joomla\CMS\Factory;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\CMS\Language\Text;
 
+HTMLHelper::_('bootstrap.tooltip');
+$app = Factory::getApplication();
 
 ?>
 <div id="title-breadcrumb">
-
 
 <h1>
 <?php
@@ -24,13 +26,11 @@ echo $app->getMenu()->getItem($app->getMenu()->getActive()->tree[0])->title;
 </h1>
 
 
-
-
 <ul class="breadcrumb">
 	<?php
 	if ($params->get('showHere', 1))
 	{
-		echo '<li class="first-active">' . JText::_('MOD_BREADCRUMBS_HERE') . '&#160;</li>';
+		echo '<li class="first-active">' . Text::_('MOD_BREADCRUMBS_HERE') . '&#160;</li>';
 	}
 	else
 	{

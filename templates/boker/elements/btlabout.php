@@ -1,26 +1,39 @@
 <?php
+/**
+ * Boker Template About Field for Joomla 6
+ * 
+ * @package     Joomla.Site
+ * @subpackage  Templates.Boker.Elements
+ * @copyright   Copyright (C) Globbersthemes. All rights reserved.
+ * @license     GNU General Public License version 2 or later
+ */
 
-defined('JPATH_BASE') or die;
-ini_set('display_errors',0);
-jimport('joomla.form.formfield');
+defined('_JEXEC') or die;
 
-class JFormFieldBTLAbout extends JFormField{
+use Joomla\CMS\Factory;
+use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Form\FormField;
 
-	public function getTemplateName(){
-		$templateName 	= end(explode( DIRECTORY_SEPARATOR, str_replace( array( '\elements', '/elements' ), '', dirname(__FILE__) )) );
-		//$templateName 	= $templateName [ count( $templateName ) - 1 ];
+class BokerFormFieldBTLAbout extends FormField
+{
+	public function getTemplateName()
+	{
+		$templateName = end(explode(DIRECTORY_SEPARATOR, str_replace(['\\elements', '/elements'], '', dirname(__DIR__))));
 		return $templateName;
 	}
 
-	protected function getInput(){
-		$doc = JFactory::getDocument();
-
+	protected function getInput()
+	{
+		$doc = Factory::getDocument();
 		$templateName = $this->getTemplateName();
 
- 		$doc->addStyleSheet(JURI::root().'templates/'.$templateName.'/admin/css/btl_admin.css');
-		if(version_compare(JVERSION,"3.0.0","lt")){
-		    $doc->addScript(JURI::root().'templates/'.$templateName.'/admin/js/btl_slider.js');
-		    $doc->addScript(JURI::root().'templates/'.$templateName.'/admin/js/btl_admin.js');
-		}
+		$doc->addStyleSheet(Uri::root() . 'templates/' . $templateName . '/admin/css/btl_admin.css');
+		
+		// For Joomla 6, we use modern asset loading
+		// The version check for Joomla < 3.0 is no longer needed as Joomla 6 requires at least PHP 8.1
+		$doc->addScript(Uri::root() . 'templates/' . $templateName . '/admin/js/btl_slider.js');
+		$doc->addScript(Uri::root() . 'templates/' . $templateName . '/admin/js/btl_admin.js');
+		
+		return '';
 	}
 }
