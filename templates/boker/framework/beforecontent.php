@@ -1,613 +1,299 @@
 <?php
 /**
+ * Boker Template Framework - Before Content Section
+ * 
  * @package     Joomla.Site
- * @subpackage  Riversen Template
+ * @subpackage  Templates.Boker.Framework
+ * @copyright   Copyright (C) Globbersthemes. All rights reserved.
+ * @license     GNU General Public License version 2 or later
  */
-
 
 defined('_JEXEC') or die;
 
-//section modules columns
+use Joomla\CMS\Factory;
+
+// Section modules columns
 $before_content_a = $this->countModules('beforecontent1');
 $before_content_b = $this->countModules('beforecontent2');
 $before_content_c = $this->countModules('beforecontent3');
 $before_content_d = $this->countModules('beforecontent4');
 
-//columns layout
-$before_content_four_columns_layout = $this->params->get('before_content_four_columns_layout');
-$before_content_three_columns_layout = $this->params->get('before_content_three_columns_layout');
-$before_content_two_columns_layout = $this->params->get('before_content_two_columns_layout');
-$before_content_one_column_layout = $this->params->get('before_content_one_column_layout'); 
-
-//four columns grid
-if ($before_content_four_columns_layout=='2,2,2,6') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_6';
-}
-elseif ($before_content_four_columns_layout=='2,2,3,5') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_5';
-}
-elseif ($before_content_four_columns_layout=='2,2,4,4') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_4';
-	$grid_4col_4 = 'grid_4';
-}
-elseif ($before_content_four_columns_layout=='2,2,5,3') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_5';
-	$grid_4col_4 = 'grid_3';
-}
-elseif ($before_content_four_columns_layout=='2,2,6,2') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_6';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='2,3,2,5') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_5';
-}
-
-elseif ($before_content_four_columns_layout=='2,3,3,4') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_4';
-}
-
-elseif ($before_content_four_columns_layout=='2,3,4,3') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_4';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='2,3,5,2') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_5';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='2,4,2,4') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_4';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_4';
-}
-
-elseif ($before_content_four_columns_layout=='2,4,3,3') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_4';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='2,4,4,2') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_4';
-	$grid_4col_3 = 'grid_4';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='2,5,2,3') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_5';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='2,5,3,2') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_5';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='2,6,2,2') {
-	$grid_4col_1 = 'grid_2';
-	$grid_4col_2 = 'grid_6';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='3,2,2,5') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_5';
-}
-
-elseif ($before_content_four_columns_layout=='3,2,3,4') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_4';
-}
-
-elseif ($before_content_four_columns_layout=='3,2,5,2') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_5';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='3,3,2,4') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_4';
-}
-
-elseif ($before_content_four_columns_layout=='3,3,3,3') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='3,3,4,2') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_4';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='3,4,2,3') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_4';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='3,4,3,2') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_4';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='3,5,2,2') {
-	$grid_4col_1 = 'grid_3';
-	$grid_4col_2 = 'grid_5';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='4,2,2,4') {
-	$grid_4col_1 = 'grid_4';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_4';
-}
-
-elseif ($before_content_four_columns_layout=='4,2,3,3') {
-	$grid_4col_1 = 'grid_4';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='4,2,4,2') {
-	$grid_4col_1 = 'grid_4';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_4';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='4,3,2,3') {
-	$grid_4col_1 = 'grid_4';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='4,3,3,2') {
-	$grid_4col_1 = 'grid_4';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='4,4,2,2') {
-	$grid_4col_1 = 'grid_4';
-	$grid_4col_2 = 'grid_4';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='5,2,2,3') {
-	$grid_4col_1 = 'grid_5';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_3';
-}
-
-elseif ($before_content_four_columns_layout=='5,2,3,2') {
-	$grid_4col_1 = 'grid_5';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_3';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='5,3,2,2') {
-	$grid_4col_1 = 'grid_5';
-	$grid_4col_2 = 'grid_3';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_2';
-}
-
-elseif ($before_content_four_columns_layout=='6,2,2,2') {
-	$grid_4col_1 = 'grid_6';
-	$grid_4col_2 = 'grid_2';
-	$grid_4col_3 = 'grid_2';
-	$grid_4col_4 = 'grid_2';
-}
-
-//three columns grid
-if ($before_content_three_columns_layout=='2,2,8') {
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_8';
-}
-elseif ($before_content_three_columns_layout=='2,3,7'){
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_3';
-	$grid_3col_3 = 'grid_7';
-}
-elseif ($before_content_three_columns_layout=='2,4,6'){
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_4';
-	$grid_3col_3 = 'grid_6';
-}
-elseif ($before_content_three_columns_layout=='2,5,5'){
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_5';
-	$grid_3col_3 = 'grid_5';
-}
-elseif ($before_content_three_columns_layout=='2,6,4'){
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_6';
-	$grid_3col_3 = 'grid_4';
-}
-elseif ($before_content_three_columns_layout=='2,7,3'){
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_7';
-	$grid_3col_3 = 'grid_3';
-}
-
-elseif ($before_content_three_columns_layout=='2,8,2'){
-	$grid_3col_1 = 'grid_2';
-	$grid_3col_2 = 'grid_8';
-	$grid_3col_3 = 'grid_2';
-}
-
-elseif ($before_content_three_columns_layout=='3,2,7'){
-	$grid_3col_1 = 'grid_3';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_7';
-}
-
-elseif ($before_content_three_columns_layout=='3,3,6'){
-	$grid_3col_1 = 'grid_3';
-	$grid_3col_2 = 'grid_3';
-	$grid_3col_3 = 'grid_6';
-}
-
-elseif ($before_content_three_columns_layout=='3,4,5'){
-	$grid_3col_1 = 'grid_3';
-	$grid_3col_2 = 'grid_4';
-	$grid_3col_3 = 'grid_5';
-}
-
-elseif ($before_content_three_columns_layout=='3,5,4'){
-	$grid_3col_1 = 'grid_3';
-	$grid_3col_2 = 'grid_5';
-	$grid_3col_3 = 'grid_4';
-}
-
-elseif ($before_content_three_columns_layout=='3,6,3'){
-	$grid_3col_1 = 'grid_3';
-	$grid_3col_2 = 'grid_6';
-	$grid_3col_3 = 'grid_3';
-}
-
-elseif ($before_content_three_columns_layout=='3,7,2'){
-	$grid_3col_1 = 'grid_3';
-	$grid_3col_2 = 'grid_7';
-	$grid_3col_3 = 'grid_2';
-}
-
-elseif ($before_content_three_columns_layout=='4,2,6'){
-	$grid_3col_1 = 'grid_4';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_6';
-}
-
-elseif ($before_content_three_columns_layout=='4,3,5'){
-	$grid_3col_1 = 'grid_4';
-	$grid_3col_2 = 'grid_3';
-	$grid_3col_3 = 'grid_5';
-}
-
-elseif ($before_content_three_columns_layout=='4,4,4'){
-	$grid_3col_1 = 'grid_4';
-	$grid_3col_2 = 'grid_4';
-	$grid_3col_3 = 'grid_4';
-}
-
-elseif ($before_content_three_columns_layout=='4,5,3'){
-	$grid_3col_1 = 'grid_4';
-	$grid_3col_2 = 'grid_5';
-	$grid_3col_3 = 'grid_3';
-}
-
-elseif ($before_content_three_columns_layout=='4,6,2'){
-	$grid_3col_1 = 'grid_4';
-	$grid_3col_2 = 'grid_6';
-	$grid_3col_3 = 'grid_2';
-}
-
-elseif ($before_content_three_columns_layout=='5,2,5'){
-	$grid_3col_1 = 'grid_5';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_5';
-}
-
-elseif ($before_content_three_columns_layout=='5,3,4'){
-	$grid_3col_1 = 'grid_5';
-	$grid_3col_2 = 'grid_3';
-	$grid_3col_3 = 'grid_4';
-}
-
-elseif ($before_content_three_columns_layout=='5,4,3'){
-	$grid_3col_1 = 'grid_5';
-	$grid_3col_2 = 'grid_4';
-	$grid_3col_3 = 'grid_3';
-}
-
-elseif ($before_content_three_columns_layout=='5,5,2'){
-	$grid_3col_1 = 'grid_5';
-	$grid_3col_2 = 'grid_5';
-	$grid_3col_3 = 'grid_2';
-}
-
-elseif ($before_content_three_columns_layout=='6,2,4'){
-	$grid_3col_1 = 'grid_6';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_4';
-}
-
-elseif ($before_content_three_columns_layout=='6,3,3'){
-	$grid_3col_1 = 'grid_6';
-	$grid_3col_2 = 'grid_3';
-	$grid_3col_3 = 'grid_3';
-}
-
-elseif ($before_content_three_columns_layout=='6,4,2'){
-	$grid_3col_1 = 'grid_6';
-	$grid_3col_2 = 'grid_4';
-	$grid_3col_3 = 'grid_2';
-}
-
-elseif ($before_content_three_columns_layout=='7,2,3'){
-	$grid_3col_1 = 'grid_7';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_3';
-}
-
-elseif ($before_content_three_columns_layout=='7,3,2'){
-	$grid_3col_1 = 'grid_7';
-	$grid_3col_2 = 'grid_3';
-	$grid_3col_3 = 'grid_2';
-}
-
-elseif ($before_content_three_columns_layout=='8,2,2'){
-	$grid_3col_1 = 'grid_8';
-	$grid_3col_2 = 'grid_2';
-	$grid_3col_3 = 'grid_2';
-}
-
-
-
-//two columns grid
-if ($before_content_two_columns_layout=='2,10') {
-	$grid_2col_1 = 'grid_2';
-	$grid_2col_2 = 'grid_10';
-}
-
-elseif ($before_content_two_columns_layout=='3,9') {
-	$grid_2col_1 = 'grid_3';
-	$grid_2col_2 = 'grid_9';
-}
-
-elseif ($before_content_two_columns_layout=='4,8') {
-	$grid_2col_1 = 'grid_4';
-	$grid_2col_2 = 'grid_8';
-}
-
-elseif ($before_content_two_columns_layout=='5,7') {
-	$grid_2col_1 = 'grid_5';
-	$grid_2col_2 = 'grid_7';
-}
-
-elseif ($before_content_two_columns_layout=='6,6') {
-	$grid_2col_1 = 'grid_6';
-	$grid_2col_2 = 'grid_6';
-}
-
-elseif ($before_content_two_columns_layout=='7,5') {
-	$grid_2col_1 = 'grid_7';
-	$grid_2col_2 = 'grid_5';
-}
-
-elseif ($before_content_two_columns_layout=='8,4') {
-	$grid_2col_1 = 'grid_8';
-	$grid_2col_2 = 'grid_4';
-}
-
-elseif ($before_content_two_columns_layout=='9,3') {
-	$grid_2col_1 = 'grid_9';
-	$grid_2col_2 = 'grid_3';
-}
-
-elseif ($before_content_two_columns_layout=='10,2') {
-	$grid_2col_1 = 'grid_10';
-	$grid_2col_2 = 'grid_2';
-}
-
-if ($before_content_a || $before_content_b || $before_content_c || $before_content_d ){
+// Columns layout
+$before_content_four_columns_layout = $this->params->get('before_content_four_columns_layout', '3,3,3,3');
+$before_content_three_columns_layout = $this->params->get('before_content_three_columns_layout', '4,4,4');
+$before_content_two_columns_layout = $this->params->get('before_content_two_columns_layout', '6,6');
+
+// Helper function to determine grid classes for 4 columns
+function getBeforeContentGrid4Col($layout, $position)
+{
+	$layouts = [
+		'2,2,2,6' => ['grid_2', 'grid_2', 'grid_2', 'grid_6'],
+		'2,2,3,5' => ['grid_2', 'grid_2', 'grid_3', 'grid_5'],
+		'2,2,4,4' => ['grid_2', 'grid_2', 'grid_4', 'grid_4'],
+		'2,2,5,3' => ['grid_2', 'grid_2', 'grid_5', 'grid_3'],
+		'2,2,6,2' => ['grid_2', 'grid_2', 'grid_6', 'grid_2'],
+		'2,3,2,5' => ['grid_2', 'grid_3', 'grid_2', 'grid_5'],
+		'2,3,3,4' => ['grid_2', 'grid_3', 'grid_3', 'grid_4'],
+		'2,3,4,3' => ['grid_2', 'grid_3', 'grid_4', 'grid_3'],
+		'2,3,5,2' => ['grid_2', 'grid_3', 'grid_5', 'grid_2'],
+		'2,4,2,4' => ['grid_2', 'grid_4', 'grid_2', 'grid_4'],
+		'2,4,3,3' => ['grid_2', 'grid_4', 'grid_3', 'grid_3'],
+		'2,4,4,2' => ['grid_2', 'grid_4', 'grid_4', 'grid_2'],
+		'2,5,2,3' => ['grid_2', 'grid_5', 'grid_2', 'grid_3'],
+		'2,5,3,2' => ['grid_2', 'grid_5', 'grid_3', 'grid_2'],
+		'2,6,2,2' => ['grid_2', 'grid_6', 'grid_2', 'grid_2'],
+		'3,2,2,5' => ['grid_3', 'grid_2', 'grid_2', 'grid_5'],
+		'3,2,3,4' => ['grid_3', 'grid_2', 'grid_3', 'grid_4'],
+		'3,2,5,2' => ['grid_3', 'grid_2', 'grid_5', 'grid_2'],
+		'3,3,2,4' => ['grid_3', 'grid_3', 'grid_2', 'grid_4'],
+		'3,3,3,3' => ['grid_3', 'grid_3', 'grid_3', 'grid_3'],
+		'3,3,4,2' => ['grid_3', 'grid_3', 'grid_4', 'grid_2'],
+		'3,4,2,3' => ['grid_3', 'grid_4', 'grid_2', 'grid_3'],
+		'3,4,3,2' => ['grid_3', 'grid_4', 'grid_3', 'grid_2'],
+		'3,5,2,2' => ['grid_3', 'grid_5', 'grid_2', 'grid_2'],
+		'4,2,2,4' => ['grid_4', 'grid_2', 'grid_2', 'grid_4'],
+		'4,2,3,3' => ['grid_4', 'grid_2', 'grid_3', 'grid_3'],
+		'4,2,4,2' => ['grid_4', 'grid_2', 'grid_4', 'grid_2'],
+		'4,3,2,3' => ['grid_4', 'grid_3', 'grid_2', 'grid_3'],
+		'4,3,3,2' => ['grid_4', 'grid_3', 'grid_3', 'grid_2'],
+		'4,4,2,2' => ['grid_4', 'grid_4', 'grid_2', 'grid_2'],
+		'5,2,2,3' => ['grid_5', 'grid_2', 'grid_2', 'grid_3'],
+		'5,2,3,2' => ['grid_5', 'grid_2', 'grid_3', 'grid_2'],
+		'5,3,2,2' => ['grid_5', 'grid_3', 'grid_2', 'grid_2'],
+		'6,2,2,2' => ['grid_6', 'grid_2', 'grid_2', 'grid_2'],
+	];
+	
+	if (isset($layouts[$layout])) {
+		return $layouts[$layout][$position] ?? 'grid_3';
+	}
+	return 'grid_3';
+}
+
+// Helper function to determine grid classes for 3 columns
+function getBeforeContentGrid3Col($layout, $position)
+{
+	$layouts = [
+		'2,2,8' => ['grid_2', 'grid_2', 'grid_8'],
+		'2,3,7' => ['grid_2', 'grid_3', 'grid_7'],
+		'2,4,6' => ['grid_2', 'grid_4', 'grid_6'],
+		'2,5,5' => ['grid_2', 'grid_5', 'grid_5'],
+		'2,6,4' => ['grid_2', 'grid_6', 'grid_4'],
+		'2,7,3' => ['grid_2', 'grid_7', 'grid_3'],
+		'2,8,2' => ['grid_2', 'grid_8', 'grid_2'],
+		'3,2,7' => ['grid_3', 'grid_2', 'grid_7'],
+		'3,3,6' => ['grid_3', 'grid_3', 'grid_6'],
+		'3,4,5' => ['grid_3', 'grid_4', 'grid_5'],
+		'3,5,4' => ['grid_3', 'grid_5', 'grid_4'],
+		'3,6,3' => ['grid_3', 'grid_6', 'grid_3'],
+		'3,7,2' => ['grid_3', 'grid_7', 'grid_2'],
+		'4,2,6' => ['grid_4', 'grid_2', 'grid_6'],
+		'4,3,5' => ['grid_4', 'grid_3', 'grid_5'],
+		'4,4,4' => ['grid_4', 'grid_4', 'grid_4'],
+		'4,5,3' => ['grid_4', 'grid_5', 'grid_3'],
+		'4,6,2' => ['grid_4', 'grid_6', 'grid_2'],
+		'5,2,5' => ['grid_5', 'grid_2', 'grid_5'],
+		'5,3,4' => ['grid_5', 'grid_3', 'grid_4'],
+		'5,4,3' => ['grid_5', 'grid_4', 'grid_3'],
+		'5,5,2' => ['grid_5', 'grid_5', 'grid_2'],
+		'6,2,4' => ['grid_6', 'grid_2', 'grid_4'],
+		'6,3,3' => ['grid_6', 'grid_3', 'grid_3'],
+		'6,4,2' => ['grid_6', 'grid_4', 'grid_2'],
+		'7,2,3' => ['grid_7', 'grid_2', 'grid_3'],
+		'7,3,2' => ['grid_7', 'grid_3', 'grid_2'],
+		'8,2,2' => ['grid_8', 'grid_2', 'grid_2'],
+	];
+	
+	if (isset($layouts[$layout])) {
+		return $layouts[$layout][$position] ?? 'grid_4';
+	}
+	return 'grid_4';
+}
+
+// Helper function to determine grid classes for 2 columns
+function getBeforeContentGrid2Col($layout, $position)
+{
+	$layouts = [
+		'2,10' => ['grid_2', 'grid_10'],
+		'3,9' => ['grid_3', 'grid_9'],
+		'4,8' => ['grid_4', 'grid_8'],
+		'5,7' => ['grid_5', 'grid_7'],
+		'6,6' => ['grid_6', 'grid_6'],
+		'7,5' => ['grid_7', 'grid_5'],
+		'8,4' => ['grid_8', 'grid_4'],
+		'9,3' => ['grid_9', 'grid_3'],
+		'10,2' => ['grid_10', 'grid_2'],
+	];
+	
+	if (isset($layouts[$layout])) {
+		return $layouts[$layout][$position] ?? 'grid_6';
+	}
+	return 'grid_6';
+}
+
+// Get grid classes based on active modules
+$grid_4col_1 = getBeforeContentGrid4Col($before_content_four_columns_layout, 0);
+$grid_4col_2 = getBeforeContentGrid4Col($before_content_four_columns_layout, 1);
+$grid_4col_3 = getBeforeContentGrid4Col($before_content_four_columns_layout, 2);
+$grid_4col_4 = getBeforeContentGrid4Col($before_content_four_columns_layout, 3);
+
+$grid_3col_1 = getBeforeContentGrid3Col($before_content_three_columns_layout, 0);
+$grid_3col_2 = getBeforeContentGrid3Col($before_content_three_columns_layout, 1);
+$grid_3col_3 = getBeforeContentGrid3Col($before_content_three_columns_layout, 2);
+
+$grid_2col_1 = getBeforeContentGrid2Col($before_content_two_columns_layout, 0);
+$grid_2col_2 = getBeforeContentGrid2Col($before_content_two_columns_layout, 1);
+
+if ($before_content_a || $before_content_b || $before_content_c || $before_content_d) {
+	// Framework file continues...
 }
 
 ?>
 
-
 <div id="beforecontent">
-<!-- start feature -->
+<!-- start before content -->
 	<?php /*four columns modules*/ 
-		if ($before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>		
+		if ($before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>	
             <div class="container_12">
 			<div class="<?php echo $grid_4col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
 			<div class="<?php echo $grid_4col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
 			<div class="<?php echo $grid_4col_3; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
 			<div class="<?php echo $grid_4col_4; ?>" data-scrollReveal="enter from the top after 0.8s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-               		
 			</div>
 			
 		<?php
 		}
-		elseif (!$before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out" ><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.9s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-			    
-            </div>			
-		<?php 
-		
-		}
-		elseif ($before_content_a && !$before_content_b && $before_content_c && $before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.9s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-			     
-            </div>			
-		<?php 
-		}
-		elseif ($before_content_a && $before_content_b && !$before_content_c && $before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.9s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-			      
-            </div>	
+		elseif (!$before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>	
+            <div class="container_12">
+			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
 			
-		<?php
-		}
-		elseif ($before_content_a && $before_content_b && $before_content_c && !$before_content_d) { ?>
-		   <div class="container_12">
-			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.9s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
-             		
-		    </div>
-			
-			
-			<?php /*two columns modules*/
-		 }
-		elseif (!$before_content_a && !$before_content_b && $before_content_c && $before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-			     
-            </div>			
-		<?php
-		}
-		elseif (!$before_content_a && $before_content_b && !$before_content_c && $before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-                		
-            </div>			
 		<?php 
 		}
-		elseif (!$before_content_a && $before_content_b && $before_content_c && !$before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
-               			
-            </div>			
+		elseif ($before_content_a && !$before_content_b && $before_content_c && $before_content_d) { ?>	
+            <div class="container_12">
+			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
+			
 		<?php 
 		}
-		elseif ($before_content_a && !$before_content_b && $before_content_c && !$before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
-			     
-            </div>			
+		elseif ($before_content_a && $before_content_b && !$before_content_c && $before_content_d) { ?>	
+            <div class="container_12">
+			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		elseif ($before_content_a && $before_content_b && $before_content_c && !$before_content_d) { ?>	
+            <div class="container_12">
+			<div class="<?php echo $grid_3col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_3col_3; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		elseif ($before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		elseif ($before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		elseif ($before_content_a && $before_content_b && $before_content_c && $before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
+			
 		<?php 
 		}
 		elseif ($before_content_a && $before_content_b && !$before_content_c && !$before_content_d) { ?>
-		    <div class="container_12">
-			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
-			   
-            </div>			
-		<?php 
-		} 
-		elseif ($before_content_a && !$before_content_b && !$before_content_c && $before_content_d) { ?>
-		   <div class="container_12">
-			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
-			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.6s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
-			    
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
 			</div>
 			
-			<?php /*one column modules*/
+		<?php 
+		}
+		elseif ($before_content_a && !$before_content_b && !$before_content_c && $before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
 			
-		} 
+		<?php 
+		}
+		elseif ($before_content_a && !$before_content_b && $before_content_c && !$before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		elseif (!$before_content_a && $before_content_b && !$before_content_c && $before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		elseif (!$before_content_a && $before_content_b && $before_content_c && !$before_content_d) { ?>
+			<div class="container_12">
+			<div class="<?php echo $grid_2col_1; ?>" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="<?php echo $grid_2col_2; ?>" data-scrollReveal="enter from the top after 0.4s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			</div>
+			
+		<?php 
+		}
+		
+		<?php /*one column modules*/
+		}
 		elseif ($before_content_a && !$before_content_b && !$before_content_c && !$before_content_d) { ?>
-		<div class="container_12">
-			<div class="grid_12" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			<div class="container_12">
+			<div class="grid_12" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent1" style="xhtml" /></div></div>
+			</div>
 			
-        </div>	
-            	 	
 		<?php 
 		}
 		elseif (!$before_content_a && $before_content_b && !$before_content_c && !$before_content_d) { ?>
-		<div class="container_12">
-			<div class="grid_12" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			<div class="container_12">
+			<div class="grid_12" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent2" style="xhtml" /></div></div>
+			</div>
 			
-        </div>	
-              	
 		<?php 
 		}
 		elseif (!$before_content_a && !$before_content_b && $before_content_c && !$before_content_d) { ?>
-		<div class="container_12">
-			<div class="grid_12" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			<div class="container_12">
+			<div class="grid_12" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent3" style="xhtml" /></div></div>
+			</div>
 			
-        </div>	
-               	
 		<?php 
 		}
 		elseif (!$before_content_a && !$before_content_b && !$before_content_c && $before_content_d) { ?>
-		<div class="container_12">
-			<div class="grid_12" data-scrollReveal="enter from the top after 0.3s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			<div class="container_12">
+			<div class="grid_12" data-scrollReveal="enter from the top after 0.2s ease-out"><div class="block"><jdoc:include type="modules" name="beforecontent4" style="xhtml" /></div></div>
+			</div>
 			
-		</div>
-			
-		<?php } ?>
-		</div>
+		<?php 
+		}
+		
 		<style type="text/css">
              #beforecontent .container_12 {
 	         text-align:<?php echo $this->params->get('before_content_text_align','left') ?>;
@@ -615,5 +301,4 @@ if ($before_content_a || $before_content_b || $before_content_c || $before_conte
 
         </style>
 
-
-			
+</div>
