@@ -29,7 +29,9 @@ $logo          = $params->get('logo');
 
 // Add Stylesheets
 HTMLHelper::_('bootstrap.framework');
-HTMLHelper::_('jquery.framework');
+
+// Use modern WebAssetManager for jQuery in Joomla 6
+$doc->getWebAssetManager()->useScript('jquery');
 
 $doc->addStyleSheet(Uri::base() . 'templates/' . $tplName . '/css/fontawesome/css/font-awesome.css');
 $doc->addStyleSheet(Uri::base() . 'templates/' . $tplName . '/css/style.css');
@@ -52,11 +54,15 @@ $right = $this->countModules('right');
 	<jdoc:include type="head" />
 	
 	<!-- Make the web page appear 100% instead of scaling -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<!-- Add to Home Screen for iOS -->
 	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="HandheldFriendly" content="true">
 	
 	<link rel="icon" type="image/gif" href="<?php echo Uri::base(); ?>templates/<?php echo $this->template; ?>/favicon.gif" />
+	<!--[if lt IE 9]>
+		<script src="<?php echo Uri::base(); ?>media/jui/js/html5.js"></script>
+	<![endif]-->
 	
 	<style type="text/css">
 		body {
