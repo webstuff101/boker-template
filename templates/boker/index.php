@@ -60,9 +60,6 @@ $right = $this->countModules('right');
 	<meta name="HandheldFriendly" content="true">
 	
 	<link rel="icon" type="image/gif" href="<?php echo Uri::base(); ?>templates/<?php echo $this->template; ?>/favicon.gif" />
-	<!--[if lt IE 9]>
-		<script src="<?php echo Uri::base(); ?>media/jui/js/html5.js"></script>
-	<![endif]-->
 	
 	<style type="text/css">
 		body {

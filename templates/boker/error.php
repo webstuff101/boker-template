@@ -26,9 +26,6 @@ $doc = Factory::getDocument();
 	<title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
 	<link rel="stylesheet" type="text/css" href="<?php echo Uri::base(); ?>templates/<?php echo $this->template; ?>/css/style.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<!--[if lt IE 9]>
-		<script src="<?php echo Uri::base(); ?>media/jui/js/html5.js"></script>
-	<![endif]-->
 </head>
 <body class="error">
 	<center>

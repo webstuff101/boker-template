@@ -2,24 +2,18 @@
 <extension version="6.0.0" type="template" client="site">
 	<name>boker</name>
 	<creationDate>November 2025</creationDate>
-	<author>globbers / Anderau</author>
-	<copyright>Copyright (C) Globbersthemes License All rights reserved.</copyright>
+	<author>Boker Template</author>
+	<copyright>Copyright (C) Boker Template. All rights reserved.</copyright>
 	<version>6.0.0</version>
 	<description> 
 	 <![CDATA[
 	   <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
 	      <br>
-	      <h1 class="temph1"style="text-align:center;">BOKER JOOMLA TEMPLATE VERSION PRO</h1>
+	      <h1 class="temph1" style="text-align:center;">Boker Joomla Template</h1>
 		  <br /><br />
-	      <span style="color:red; font-weight: bold; text-align:center;">NUMBER LICENSE: BOK-7856-412-52-GL</span> <br />		  
-	      <h4 class="temph4" style="text-align:center;">Beautiful Fast & Light joomla Template</h4>
-	      <p class="text_propery" style="text-align:center">Powerfull admin area allow easy control templeate elements like fonts, logo, colors etc. Fully responsive grid.</p>
-	      <br> <br />
-	      <div id="down_pictures" style="text-align:center;"> 
-		    <a href="http://www.globbersthemes.com"><img style="width:500px;height:383px;text-align:center;" src="../templates/boker/boker_features.jpg"></a>
-		    <div style="clear:both;"></div>
-	      </div>
-			<br /><br />]]>
+	      <h4 class="temph4" style="text-align:center;">Beautiful Fast & Light Joomla Template</h4>
+	      <p class="text_propery" style="text-align:center;">Powerful admin area allows easy control of template elements like fonts, logo, colors etc. Fully responsive grid.</p>
+	      <br> <br />]]>
 	</description>
 
 	<files>
@@ -37,10 +31,10 @@
 		<filename>index.php</filename>
 		<filename>templateDetails.xml</filename>
 		<filename>template_preview.png</filename>
-		<filename>boker_features.jpg</filename>
+
 		<filename>template_thumbnail.png</filename>
 		<filename>error.php</filename>
-		<filename>globbersthemes_template_logo.png</filename>
+
 		<filename>favicon.gif</filename>	
 	</files>
 
