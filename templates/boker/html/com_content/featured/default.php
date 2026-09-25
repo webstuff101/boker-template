@@ -3,20 +3,16 @@
  * @package     Joomla.Site
  * @subpackage  com_content
  *
- * @copyright   Copyright (C) 2005 - 2021 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
-if(!class_exists('ContentHelperRoute')){
-	if(version_compare(JVERSION, '4', 'ge')){
-		abstract class ContentHelperRoute extends \Joomla\Component\content\Site\Helper\RouteHelper{};
-	}else{
-		JLoader::register('ContentHelperRoute', $com_path . '/helpers/route.php');
-	}
-}
-//compatible params on joomla 4
+use Joomla\CMS\Component\ContentComponent;
+use Joomla\Component\Content\Site\Helper\RouteHelper;
+
+// Compatible params on Joomla 4/5/6
 $this->columns = !empty($this->columns) ? $this->columns : $this->params->get('num_columns');
 $this->blog_class_leading = $this->params->get('blog_class_leading','');
 $this->blog_class = $this->params->get('blog_class','');
@@ -119,5 +115,4 @@ $this->blog_class = $this->params->get('blog_class','');
 			<?php echo $this->pagination->getPagesLinks(); ?>
 		</div>
 	<?php endif; ?>
-
 

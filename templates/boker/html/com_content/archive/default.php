@@ -3,14 +3,14 @@
  * @package     Joomla.Site
  * @subpackage  com_content
  *
- * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
+
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
-
 
 ?>
 <div class="archive<?php echo $this->pageclass_sfx;?>">
@@ -21,11 +21,11 @@ use Joomla\CMS\Router\Route;
 </h1>
 </div>
 <?php endif; ?>
-<form id="adminForm" action="<?php echo JRoute::_('index.php')?>" method="post" class="form-inline">
+<form id="adminForm" action="<?php echo Route::_('index.php'); ?>" method="post" class="form-inline">
 	<fieldset class="filters">	
 	<div class="filter-search">
 		<?php if ($this->params->get('filter_field') != 'hide') : ?>
-		<label class="filter-search-lbl" for="filter-search"><?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL').'&#160;'; ?></label>
+		<label class="filter-search-lbl" for="filter-search"><?php echo Text::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL').'&#160;'; ?></label>
 		<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->filter); ?>" class="inputbox span2" onchange="document.getElementById('adminForm').submit();" />
 		<?php endif; ?>
 
@@ -33,7 +33,7 @@ use Joomla\CMS\Router\Route;
 		<?php echo $this->form->yearField; ?>
 		<?php echo $this->form->limitField; ?>
 	
-		<button type="submit" class="btn btn-primary"><?php echo JText::_('JGLOBAL_FILTER_BUTTON'); ?></button>	
+		<button type="submit" class="btn btn-primary"><?php echo Text::_('JGLOBAL_FILTER_BUTTON'); ?></button>	
 	</div>
 	
 	<input type="hidden" name="view" value="archive" />

@@ -3,11 +3,17 @@
  * @package     Joomla.Site
  * @subpackage  com_content
  *
- * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2025 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
+
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Router\Route;
+use Joomla\CMS\HTML\HTMLHelper;
+use Joomla\Component\Content\Site\Helper\RouteHelper;
+
 $class = ' class="first"';
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 ?>
@@ -22,10 +28,10 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 	?>
 	<li>
 	<?php $class = ''; ?>
-		<span class="item-title"><a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id));?>">
+		<span class="item-title"><a href="<?php echo Route::_(RouteHelper::getCategoryRoute($item->id));?>">
 			<?php echo $this->escape($item->title); ?></a>
 			<?php if ($this->params->get('show_cat_num_articles_cat') == 1) :?>
-				<span class="badge badge-info tip" rel="tooltip" title="<?php echo JText::_('COM_CONTENT_NUM_ITEMS'); ?>">
+				<span class="badge badge-info tip" rel="tooltip" title="<?php echo Text::_('COM_CONTENT_NUM_ITEMS'); ?>">
 					<?php echo $item->numitems; ?> 
 				</span>
 			<?php endif; ?>
@@ -36,7 +42,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 		<?php if ($this->params->get('show_subcat_desc_cat') == 1) :?>
 		<?php if ($item->description) : ?>
 		<div class="category-desc">
-			<?php echo JHtml::_('content.prepare', $item->description, '', 'com_content.categories'); ?>
+			<?php echo HTMLHelper::_('content.prepare', $item->description, '', 'com_content.categories'); ?>
 		</div>
 		<?php endif; ?>
         <?php endif; ?>

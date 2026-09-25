@@ -54,7 +54,7 @@ foreach ($list as $i => &$item)
 		}
 		elseif (in_array($aliasToId, $path))
 		{
-			$class .= 'alias-parent-active';
+			$class .= ' alias-parent-active';
 		}
 	}
 
@@ -113,4 +113,3 @@ foreach ($list as $i => &$item)
 }
 ?>
 </ul>
-

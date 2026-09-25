@@ -15,13 +15,14 @@ use Joomla\CMS\Language\Text;
 
 HTMLHelper::_('bootstrap.tooltip');
 $app = Factory::getApplication();
+$menu = $app->getMenu();
 
 ?>
 <div id="title-breadcrumb">
 
 <h1>
 <?php
-echo $app->getMenu()->getItem($app->getMenu()->getActive()->tree[0])->title;
+echo $menu->getItem($menu->getActive()->tree[0])->title;
 ?>
 </h1>
 
@@ -87,4 +88,3 @@ echo $app->getMenu()->getItem($app->getMenu()->getActive()->tree[0])->title;
 	endforeach; ?>
 </ul>
 </div>
-
