@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="3.6" type="template" client="site">
+<extension version="6.0.0" type="template" client="site">
 	<name>boker</name>
-	<creationDate>Bovember 2025</creationDate>
+	<creationDate>November 2025</creationDate>
 	<author>globbers / Anderau</author>
 	<copyright>Copyright (C) Globbersthemes License All rights reserved.</copyright>
-	<version>4.0.0</version>
+	<version>6.0.0</version>
 	<description> 
 	 <![CDATA[
 	   <link href='http://fonts.googleapis.com/css?family=Quicksand:400,700,300' rel='stylesheet' type='text/css'>
